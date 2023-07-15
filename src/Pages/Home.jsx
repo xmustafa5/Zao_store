@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { collection, getDocs, addDoc, doc, getDoc } from "firebase/firestore";
+import { collection, getDocs, addDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
 const Home = () => {
@@ -17,14 +17,14 @@ const Home = () => {
     setPrice(product.price); // Set the price to the priceCode of the selected product
     setPopupVisible(true);
   };
+
   const handleDiscountCodeChange = (e) => {
     setDiscountCode(e.target.value);
   };
 
-  const applyDiscountCode = async () => {
+  const applyDiscountCode = () => {
     try {
       const product = products.find((p) => p.id === selectedProduct.id);
-  
       if (product && product.priceCode && discountCode === product.code) {
         setPrice(product.priceCode);
         console.log("Discount applied successfully!");
@@ -36,8 +36,6 @@ const Home = () => {
       console.error("Error applying discount code: ", error);
     }
   };
-  
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,6 +47,20 @@ const Home = () => {
         number,
         price,
       };
+
+      // Apply discount code if it matches the selected product
+      applyDiscountCode();
+
+      // Decrease the usageCount in all product documents
+      const productsQuerySnapshot = await getDocs(collection(db, "products"));
+      productsQuerySnapshot.forEach(async (productDoc) => {
+        const productRef = doc(db, "products", productDoc.id);
+        const productData = productDoc.data();
+        if (productData.usageCount && productData.usageCount > 0) {
+          const updatedUsageCount = productData.usageCount - 1;
+          await updateDoc(productRef, { usageCount: updatedUsageCount });
+        }
+      });
 
       // Add the productData to the Firestore collection
       const docRef = await addDoc(collection(db, "requests"), productData);
@@ -81,10 +93,9 @@ const Home = () => {
         console.error("Error fetching products: ", error);
       }
     };
-  
+
     fetchProducts();
   }, []);
-  
 
   return (
     <>
@@ -106,7 +117,8 @@ const Home = () => {
               alt={selectedProduct.title}
               width={110}
             />
-            <p>Price: ${price}</p> {/* Display the price */}
+            <p>Price: ${price}</p>
+            {/* Display the price */}
             <input
               type="text"
               value={name}
