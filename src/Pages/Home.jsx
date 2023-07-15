@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { collection, getDocs, addDoc, doc, getDoc } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
 const Home = () => {
@@ -8,36 +8,11 @@ const Home = () => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [number, setNumber] = useState("");
-  const [discountCode, setDiscountCode] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [price, setPrice] = useState(null);
 
   const handleBuyProduct = (product) => {
     setSelectedProduct(product);
-    setPrice(product.price); // Set the default price
     setPopupVisible(true);
-  };
-
-  const handleDiscountCodeChange = (e) => {
-    setDiscountCode(e.target.value);
-  };
-
-  const applyDiscountCode = async () => {
-    try {
-      const discountQuerySnapshot = await getDocs(collection(db, "Discount"));
-      const discounts = discountQuerySnapshot.docs.map((doc) => doc.data());
-
-      const discount = discounts.find((d) => d.code === discountCode);
-
-      if (discount) {
-        setPrice(discount.priceCode);
-        console.log("Discount applied successfully!");
-      } else {
-        console.log("Invalid discount code");
-      }
-    } catch (error) {
-      console.error("Error applying discount code: ", error);
-    }
   };
 
   const handleSubmit = async (e) => {
@@ -48,7 +23,7 @@ const Home = () => {
         name,
         location,
         number,
-        price,
+        price: selectedProduct.price // Include the price in the productData
       };
 
       // Add the productData to the Firestore collection
@@ -59,7 +34,6 @@ const Home = () => {
       setName("");
       setLocation("");
       setNumber("");
-      setDiscountCode("");
 
       // Close the popup
       setPopupVisible(false);
@@ -71,7 +45,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const productsRef = collection(db, "products");
+        const productsRef = collection(db, "products"); // Replace "products" with your actual collection name
         const snapshot = await getDocs(productsRef);
         const productsData = snapshot.docs.map((doc) => doc.data());
         setProducts(productsData);
@@ -97,13 +71,8 @@ const Home = () => {
       {popupVisible && selectedProduct && (
         <div className="popup">
           <form onSubmit={handleSubmit}>
-            <h3>{selectedProduct.title}</h3>
-            <img
-              src={selectedProduct.imgUrl}
-              alt={selectedProduct.title}
-              width={110}
-            />
-            <p>Price: ${price}</p> {/* Display the price */}
+            
+            <p>Price: ${selectedProduct.price}</p> {/* Display the price */}
             <input
               type="text"
               value={name}
@@ -125,18 +94,9 @@ const Home = () => {
               placeholder="Number"
               required
             />
-            <input
-              type="text"
-              value={discountCode}
-              onChange={handleDiscountCodeChange}
-              placeholder="Discount Code"
-              required
-            />
-            <button type="button" onClick={applyDiscountCode}>
-              Apply Code
-            </button>
             <button type="submit">Buy Now</button>
           </form>
+         
         </div>
       )}
     </>
