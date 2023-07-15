@@ -17,7 +17,7 @@ const Dashboard = () => {
         const productRef = doc(db, "products", productDoc.id);
 
         // Update the product document with the entered code
-        updateDoc(productRef, { discount: code })
+        updateDoc(productRef, { code: code })
           .then(() => {
             console.log("Code added to product: ", productDoc.id);
           })
