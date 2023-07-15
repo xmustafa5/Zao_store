@@ -1,10 +1,14 @@
+import Layout from "./layout/Index";
+
 
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <Layout>
       
-    </div>
+    </Layout>
+    </>
   );
 }
 
