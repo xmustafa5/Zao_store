@@ -14,31 +14,27 @@ const Home = () => {
 
   const handleBuyProduct = (product) => {
     setSelectedProduct(product);
-    setPrice(product.price); // Set the default price
+    setPrice(product.price); // Set the price to the priceCode of the selected product
     setPopupVisible(true);
   };
-
   const handleDiscountCodeChange = (e) => {
     setDiscountCode(e.target.value);
   };
 
   const applyDiscountCode = async () => {
     try {
-      const discountQuerySnapshot = await getDocs(collection(db, "products"));
-      const discounts = discountQuerySnapshot.docs.map((doc) => doc.data());
-  
-      const discount = discounts.find((d) => d.code === discountCode);
-  
-      if (discount) {
-        setPrice(discount.priceCode);
+      const product = products.find((p) => p.id === selectedProduct.id);
+      if (product && product.priceCode) {
+        setPrice(product.priceCode);
         console.log("Discount applied successfully!");
       } else {
-        console.log("Invalid discount code");
+        console.log("Invalid product or price code not available");
       }
     } catch (error) {
       console.error("Error applying discount code: ", error);
     }
   };
+  
   
 
   const handleSubmit = async (e) => {
@@ -74,15 +70,19 @@ const Home = () => {
       try {
         const productsRef = collection(db, "products");
         const snapshot = await getDocs(productsRef);
-        const productsData = snapshot.docs.map((doc) => doc.data());
+        const productsData = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
         setProducts(productsData);
       } catch (error) {
         console.error("Error fetching products: ", error);
       }
     };
-
+  
     fetchProducts();
   }, []);
+  
 
   return (
     <>
