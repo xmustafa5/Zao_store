@@ -24,11 +24,13 @@ const Home = () => {
   const applyDiscountCode = async () => {
     try {
       const product = products.find((p) => p.id === selectedProduct.id);
-      if (product && product.priceCode) {
+  
+      if (product && product.priceCode && discountCode === product.code) {
         setPrice(product.priceCode);
         console.log("Discount applied successfully!");
       } else {
-        console.log("Invalid product or price code not available");
+        setPrice(selectedProduct.price);
+        console.log("Invalid product or discount code not available");
       }
     } catch (error) {
       console.error("Error applying discount code: ", error);
