@@ -26,6 +26,20 @@
   nav{
     margin-right: 200px;
   }
+  nav.active {
+    transform: translateY(0); /* Show the menu */
+    visibility: visible; /* Show the menu */
+    opacity: 1; /* Show the menu */
+  }
+  .burger {
+   
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Add transition property */
+  }
+  
+  .burger.active {
+    transform: rotate(180deg); /* Rotate the icon when active */
+  }
   nav a{
     font-size: 20px;
   margin-right: 100px;
@@ -36,6 +50,7 @@
   nav a:hover{
     color: var(--blcolor);
   }
+
   @media screen and (max-width: 570px) {
     .burger {
       display: flex;

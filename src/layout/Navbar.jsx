@@ -22,8 +22,8 @@ const Navbar = () => {
   
     </nav>
     <img
-      className='burger'
-      src={isActive ? CloseMenu : BurgerMenu} // Change the image source based on isActive state
+        className={`burger ${isActive ? 'active' : ''}`}
+        src={isActive ? CloseMenu : BurgerMenu} // Change the image source based on isActive state
       onClick={handleClick}
       width={30}
       height={30}
