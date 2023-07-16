@@ -56,7 +56,7 @@ const Home = () => {
       productsQuerySnapshot.forEach(async (productDoc) => {
         const productRef = doc(db, "products", productDoc.id);
         const productData = productDoc.data();
-        if (productData.usageCount && productData.usageCount > 0) {
+        if (productData.code === discountCode && productData.usageCount && productData.usageCount > 0) {
           const updatedUsageCount = productData.usageCount - 1;
           await updateDoc(productRef, { usageCount: updatedUsageCount });
         }
