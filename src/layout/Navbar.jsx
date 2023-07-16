@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { links } from '../utils/data';
 import { Link } from 'react-router-dom';
 import BurgerMenu from '../assests/menu.png';
-
+import "./Navbar.css"
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const handleClick = event => {
@@ -11,7 +11,7 @@ const Navbar = () => {
   };
   return (
     <header className='navbar'>
-    <h1 className='logo' >Eye clinic</h1>
+    <h1 className='logo' >zao store</h1>
     <nav id='mune' className={isActive ? 'active ': ''} >
       {links.map((link, i) => (
         <Link key={i} to={link.link}>
