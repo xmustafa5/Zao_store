@@ -99,8 +99,9 @@ const Home = () => {
 
   return (
     <>
+  
       {products.map((product, index) => (
-        <div key={index}>
+        <div key={index} >
           <h3>{product.title}</h3>
           <img src={product.imgUrl} alt={product.title} width={110} />
           <p>Price: ${product.price}</p>

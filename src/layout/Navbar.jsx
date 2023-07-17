@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { links } from '../utils/data';
 import { Link } from 'react-router-dom';
 import BurgerMenu from '../assests/menu.png';
+import logo from '../assests/logo.png';
 import CloseMenu from '../assests/close.png'; // Import the close icon
 import "./Navbar.css"
 const Navbar = () => {
@@ -11,11 +12,12 @@ const Navbar = () => {
     setIsActive(current => !current);
   };
   return (
-    <header className='navbar'>
-    <h1 className='logo' >zao store</h1>
+    <header className='navbar '>
+      <img  className='logo' width={160} src={logo} alt="" />
+    {/* <h1 >zao store</h1> */}
     <nav id='mune' className={isActive ? 'active ': ''} >
       {links.map((link, i) => (
-        <Link key={i} to={link.link}>
+        <Link className='' key={i} to={link.link}>
           {link.name}
         </Link>
       ))}
