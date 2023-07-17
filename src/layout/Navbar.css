@@ -1,172 +1,161 @@
 :root {
-    --fcolor: #17212b;
-    --scolor: #242f3d;
-    --hcolor: #344153;
-    --thcolor: #12d0c5;
-    --blcolor: #30a3e6;
-  }
-.navbar{
-    height: 70px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--scolor);
-  }
-  
-  .logo{
-    color: var(--thcolor);
-    font-size: 28px;
-    font-weight: 600;
-    margin-left: 120px;
-  }
-  .burger{
-    display: none;
-  }
-  nav{
-    margin-right: 200px;
-  }
-  nav.active {
-    transform: translateY(0); /* Show the menu */
-    visibility: visible; /* Show the menu */
-    opacity: 1; /* Show the menu */
-  }
-  .burger {
-   
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Add transition property */
-  }
-  
-  .burger.active {
-    transform: rotate(180deg); /* Rotate the icon when active */
-  }
-  nav a{
-    font-size: 20px;
+  --fcolor: #17212b;
+  --scolor: #242f3d;
+  --hcolor: #344153;
+  --thcolor: #12d0c5;
+  --blcolor: #30a3e6;
+}
+* {
+  font-family: 'Tajawal', sans-serif;
+}
+.navbar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--scolor);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.logo {
+  color: var(--thcolor);
+  font-size: 28px;
+  font-weight: 600;
+  margin-left: 120px;
+}
+.burger {
+  display: none;
+}
+nav {
+  margin-right: 200px;
+}
+nav.active {
+  transform: translateY(0); /* Show the menu */
+  visibility: visible; /* Show the menu */
+  opacity: 1; /* Show the menu */
+}
+.burger {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Add transition property */
+}
+
+.burger.active {
+  transform: rotate(180deg); /* Rotate the icon when active */
+}
+nav a {
+  font-size: 20px;
   margin-right: 100px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   padding: 5px 10px;
   border-radius: 30px;
-  }
-  nav a:hover{
-    color: var(--blcolor);
-  }
+}
+nav a:hover {
+  color: var(--blcolor);
+}
 
-  @media screen and (max-width: 570px) {
-    .burger {
-      display: flex;
-      margin-right: 10px;
-    }
-  
-    .logo {
-      font-size: 20px;
-      margin-left: 20px;
-    }
-  
-    #mune {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      top: 53px;
-      right: -200px;
-      padding: 0;
-      list-style: none;
-      /* background-color: var(--blcolor); */
-      max-width: 300px;
-      transform: translateX(410px);
-      transition: 500ms ease;    z-index: 200;
-  
-    }
-    nav a:nth-child(1){
-      background-color: rgba(11, 130, 122, 0.922) ;
-      width: 100%;
-      border-radius: 10px  0px  0px 73px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-weight: 400;
-    }
-    nav a:nth-child(2){
-      margin-top: 3px;
-      background-color: rgba(0, 137, 168,0.922);
-      width: 100%;
-      border-radius: 73px  0px  0px 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 16px !important;
-      z-index: 200;
-      color: var(--fcolor);
-    }
-    #mune.active {
-      transform: none;
-    }
-    .title2 {
-      font-size: 26px !important;
-      top: 140px !important;
-      left: 30px !important;
-    }
-    form {
-      width: 300px !important;
-      height: 500px !important;
-    }
-    .n h1 {
-      font-size: 20px;
-      margin-bottom: 10px !important;
-    }
+@media screen and (max-width: 570px) {
+  .burger {
+    display: flex;
+    margin-right: 10px;
   }
 
+  .logo {
+    font-size: 20px;
+    margin-left: 20px;
+  }
 
+  #mune {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 53px;
+    right: -200px;
+    padding: 0;
+    list-style: none;
+    /* background-color: var(--blcolor); */
+    max-width: 300px;
+    transform: translateX(410px);
+    transition: 500ms ease;
+    z-index: 200;
+  }
+  nav a:nth-child(1) {
+    background-color: rgba(11, 130, 122, 0.922);
+    width: 100%;
+    border-radius: 10px 0px 0px 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 400;
+  }
+  nav a:nth-child(2) {
+    margin-top: 3px;
+    background-color: rgba(0, 137, 168, 0.922);
+    width: 100%;
+    border-radius: 73px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px !important;
+    z-index: 200;
+    color: var(--fcolor);
+  }
+  #mune.active {
+    transform: none;
+  }
+  .title2 {
+    font-size: 26px !important;
+    top: 140px !important;
+    left: 30px !important;
+  }
+  form {
+    width: 300px !important;
+    height: 500px !important;
+  }
+  .n h1 {
+    font-size: 20px;
+    margin-bottom: 10px !important;
+  }
+}
 
+/* outmedit */
 
+/* Styles for devices with a width between 321px and 767px */
+@media (min-width: 570px) and (max-width: 770px) {
+  nav {
+    margin-right: 60px !important;
+  }
+  nav a {
+    margin-right: 20px !important;
+    font-size: 18px;
+  }
+  .logo {
+    font-size: 22px !important;
+    margin-left: 27px;
+  }
+}
 
-    /* outmedit */
-    
-  
-    
-    /* Styles for devices with a width between 321px and 767px */
-    @media (min-width: 570px) and (max-width: 770px) {
-    
-      nav{
-        margin-right: 60px !important;
-      }
-      nav a{
-        margin-right: 20px !important;
-        font-size: 18px;
-      }
-      .logo {
-        font-size: 22px !important;
-        margin-left: 27px;
-      }
-   
-      }
-    
-    /* Styles for devices with a width between 768px and 1023px */
-    @media (min-width: 770px) and (max-width: 992px) {
-   
-      nav{
-        margin-right: 80px !important;
-      }
-      nav a{
-        margin-right: 30px !important;
-        font-size: 20px;
-      }
-      .logo {
-        font-size: 28px !important;
-        margin-left: 100px;
-      }
-    
-    }
-    @media (min-width: 992px) and (max-width: 1095px)  {
-   
-      nav{
-        margin-right: 110px !important;
-      }
-      nav a{
-        margin-right: 50px !important;
-        font-size: 20px;
-      }
-     
-    }
- 
-    
+/* Styles for devices with a width between 768px and 1023px */
+@media (min-width: 770px) and (max-width: 992px) {
+  nav {
+    margin-right: 80px !important;
+  }
+  nav a {
+    margin-right: 30px !important;
+    font-size: 20px;
+  }
+  .logo {
+    font-size: 28px !important;
+    margin-left: 100px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1095px) {
+  nav {
+    margin-right: 110px !important;
+  }
+  nav a {
+    margin-right: 50px !important;
+    font-size: 20px;
+  }
+}

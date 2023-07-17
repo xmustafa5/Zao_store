@@ -99,8 +99,7 @@ const Home = () => {
 
   return (
     <>
-  
-      {products.map((product, index) => (
+<p className="text-3xl ">التعاون مع المصممين ومطوري الواجهة الخلفية لتحويل تصاميم واجهة المستخدم إلى واجهات ويب عمليبية.</p>      {products.map((product, index) => (
         <div key={index} >
           <h3>{product.title}</h3>
           <img src={product.imgUrl} alt={product.title} width={110} />
