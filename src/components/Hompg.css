@@ -1,9 +1,9 @@
 :root {
-    --fcolor: #17212b;
-    --scolor: #242f3d;
-    --hcolor: #344153;
-    --thcolor: #12d0c5;
-    --blcolor: #30a3e6;
+    --fcolor: #1f59b9;
+    --scolor: #182557;
+    --hcolor: #3d3799;
+    --thcolor: #f47324;
+    --blcolor: #2d6acd;
   }
   
   .drop-anim {
@@ -459,7 +459,6 @@ direction: rtl;  }
   
   @media (min-width: 375px) {
     .home22 {
-        background-color: #12d0c5;
       display: block;
     }
    
@@ -557,7 +556,6 @@ direction: rtl;  }
   
   @media (min-width: 575px) {
     .home22 {
-        background-color: #192780;
 
       display: block;
     }
@@ -679,7 +677,6 @@ direction: rtl;  }
   
   @media (min-width: 992px) {
     .home22 {
-        background-color: #2b1129;
 
       display: flex;
     }
@@ -843,7 +840,6 @@ direction: rtl;  }
   }
   @media (min-width: 1200px) {
     .home22 {
-        background-color: #6d9816;
 
       display: flex;
     }

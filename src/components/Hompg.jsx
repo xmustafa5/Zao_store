@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import bannerline from "../assets/images/banner-line-11.png";
-import bannerimgbg from "../assets/images/banner-img-bg1.png";
-import bannerimg from "../assets/images/1000.png";
+import bannerimgbg from "../assets/images/banner-img-bg11.png";
+import bannerimg from "../assets/images/1001.png";
 import banneralimenticon1 from "../assets/images/banner-aliment-icon-12.png";
 import banneralimenticon2 from "../assets/images/banner-aliment-icon-23.png";
 import banneralimenticon3 from "../assets/images/banner-aliment-icon-35.png";

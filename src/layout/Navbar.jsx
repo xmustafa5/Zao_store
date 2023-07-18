@@ -13,8 +13,8 @@ const Navbar = () => {
   };
   return (
     <header className='navbar '>
-      <img  className='logo' width={160} src={logo} alt="" />
-    {/* <h1 >zao store</h1> */}
+      {/* <img  className='logo' width={160} src={logo} alt="" /> */}
+      <h1 className='logo' >zao store</h1>
     <nav id='mune' className={isActive ? 'active ': ''} >
       {links.map((link, i) => (
         <Link className='' key={i} to={link.link}>
