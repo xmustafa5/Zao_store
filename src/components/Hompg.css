@@ -129,7 +129,7 @@
     border-radius: 50%;
     background: radial-gradient(
       ellipse at center,
-      hsla(175, 82%, 46%, 0.3),
+      hsla(50, 82%, 46%, 0.3),
       transparent 70%
     );
   }
