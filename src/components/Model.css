@@ -21,11 +21,12 @@
     right: 0;
     bottom: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 220;
 }
 
 .overlay {
-    background: rgba(49, 49, 49, 0.503);
+    background: rgba(49, 49, 49, 0.503);   
+
 }
 .modal-content {
     position: absolute;
@@ -37,7 +38,7 @@
     padding: 14px 28px;
     border-radius: 3px;
     max-width: 600px !important;
-    z-index: 10;
+    z-index: 230 ;
 }
 
 .close-modal {
