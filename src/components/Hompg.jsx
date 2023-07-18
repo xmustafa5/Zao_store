@@ -42,7 +42,7 @@ const Hompg = () => {
             data-aos="fade-right"
             data-aos-duration="900"
           >
-            Get Your Glasses 
+            احصل على منتجك 
            
             <span className={"underlineimg"}>
             
@@ -59,11 +59,11 @@ const Hompg = () => {
           </h1>
           <p className={"sectiontext"}>
          
-        -  with
-the best quality  - <br/>  At our Vision Eye Clinic <br />
-               we take the time to get to know you, <br/>your eye care history <br/> 
+        -  بارخص الاسعار  - <br/>  نختص بكل ما يحتاجه الاعب العربي <br />
+        توصيل متوفر داخل العراق 🇮🇶 <br/>your eye care history <br/> 
                and your vision needs. 
             </p>
+            <h3>تواصل معنا</h3>
           <div className={"homebtngroup"}>
             <Link to="/#shop">
               <button onClick={"handleButtonClick"}
@@ -71,11 +71,11 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
                 data-aos="zoom-in"
                 data-aos-duration="1400"
               >
-                <p className={"btntext"} >Discover eyeglasses</p>
+                <p className={"btntext"} >تصفح منتجاتنا </p>
                 <span className={"square"}></span>
               </button>
             </Link>
-            <Link href="/aboutus">
+            {/* <Link href="/aboutus">
               <button onClick={"handleButton1Click"}
                 className={"btnbtnsecondary"}
                 data-aos="zoom-in"
@@ -84,7 +84,7 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
                 <p className={"btntext"}>Discover your current vision</p>
                 <span className={"square"}></span>
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className={"homeright"}>
