@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs, addDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
+import Hompg from './../components/Hompg';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -99,6 +100,7 @@ const Home = () => {
 
   return (
     <>
+    <Hompg/>
 <p className="text-3xl ">التعاون مع المصممين ومطوري الواجهة الخلفية لتحويل تصاميم واجهة المستخدم إلى واجهات ويب عمليبية.</p>      {products.map((product, index) => (
         <div key={index} >
           <h3>{product.title}</h3>

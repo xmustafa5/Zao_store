@@ -1,10 +1,10 @@
 export const links = [
     {
       link: '/',
-      name: 'Home',
+      name: 'الرئيسية',
     },{
       link: '#shop',
-      name: 'shop',
+      name: 'المتجر',
     },
   ];
   

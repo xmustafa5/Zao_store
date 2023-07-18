@@ -1,11 +1,12 @@
 import React from 'react'
+import Card from './Card';
 
-const shop = () => {
+const Shop = () => {
   return (
     <div>
-        Shop
+        <Card/>
     </div>
   )
 }
 
-export default shop
+export default Shop

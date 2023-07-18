@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* flex-direction: row-reverse; */
   background-color: var(--scolor);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
