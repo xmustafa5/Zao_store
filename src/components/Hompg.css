@@ -285,7 +285,14 @@
     font-weight: 700;
     text-transform: uppercase;
 direction: rtl;  }
-  
+  .iconso svg{
+    color: #ded7d7 !important;
+    background-color: #12d0c5;
+    
+  }.iconso:hover{
+    color: #f00808;
+    
+  }
   .sectionsubtitle {
     display: flex;
     justify-content: center;
