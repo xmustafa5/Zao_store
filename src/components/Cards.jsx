@@ -1,6 +1,7 @@
 import React, { useState,useEffect} from 'react'
 import { collection, getDocs, addDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
+import Popup from './Popup';
 
 const Cards = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -104,7 +105,7 @@ const Cards = () => {
       ))}
 
       {popupVisible && selectedProduct && (
-        
+        <Popup/>
       )}
     </>
   )
