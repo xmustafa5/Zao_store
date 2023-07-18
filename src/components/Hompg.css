@@ -285,21 +285,12 @@
     font-weight: 700;
     text-transform: uppercase;
 direction: rtl;  }
-  .iconso svg{
-    color: #ded7d7 !important;
-    background-color: #12d0c5;
-    
-  }.iconso:hover{
-    color: #f00808;
-    
-  } .conect{
+  .conect{
     font-size: 22px;
     color: #fff;
     font-weight: 500;
   }
-  .concont{
-    
-  }
+ 
   .sectionsubtitle {
     display: flex;
     justify-content: center;
@@ -333,13 +324,14 @@ direction: rtl;  }
   }
   .sectiontext {
     margin-top: 1.5rem;
-    font-size: 19px;
-    line-height: 28px;
+    font-size: 19px !important;
+    line-height: 33px;
     color: #fff;
     max-width: 500px;
     text-align: center;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    direction: rtl;
   }
   .homebtngroup {
     display: flex;
@@ -352,13 +344,14 @@ direction: rtl;  }
   .btntext {
     position: relative;
     font-family: "Roboto", sans-serif;
-    font-size: 15px;
+    font-size: 18px !important;
     font-weight: 500;
     border-radius: 8px;
     color: #ffffff;
     padding: 20px 45px;
     text-transform: uppercase;
     overflow: hidden;
+    margin-top: 10px;
   }
   .btntext {
     position: relative;
@@ -556,8 +549,9 @@ direction: rtl;  }
     }
   }
   .btntext {
-    padding: 11px 35px !important;
-    font-size: 14px !important;
+    padding: 10px 20px !important;
+    font-size: 19px !important;
+    font-weight: 550;
   }
   /****************55555555555555555555**************/
   

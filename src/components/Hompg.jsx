@@ -57,15 +57,15 @@ const Hompg = () => {
           <p className={"sectiontext"}>
             - بارخص الاسعار - <br /> نختص بكل ما يحتاجه الاعب العربي <br />
             توصيل متوفر داخل العراق 🇮🇶 <br />
-            your eye care history <br />
-            and your vision needs.
+          <br />
+          
           </p>
           <div className="flex flex-row-reverse  justify-center gap-2 mb-3  ">
             <div>
-              <h1 className="conect" >تواصل معنا على</h1>
+              <h1 className="conect">تواصل معنا على</h1>
             </div>
             <div className=" flex flex-row-reverse items-center gap-3 ">
-            <a
+              <a
                 href="#!"
                 className="mr-5 text-neutral-800 dark:text-neutral-200"
               >
@@ -91,7 +91,7 @@ const Hompg = () => {
                   <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                 </svg>
               </a>
-             
+
               <a
                 href="#!"
                 className="mr-5 text-neutral-800 dark:text-neutral-200"
@@ -102,7 +102,6 @@ const Hompg = () => {
                   fill="currentColor"
                   viewBox="0 0 448 512"
                 >
-                  
                   <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
                 </svg>
               </a>
@@ -148,11 +147,7 @@ const Hompg = () => {
               <div className={"icon"}>
                 <div className={"icon11"}>
                   <img src={banneralimenticon1} alt="" className="icomimg1" />
-                  <img
-                    src={banneralimenticon2}
-                    alt=""
-                    className="icomimg2"
-                  />
+                  <img src={banneralimenticon2} alt="" className="icomimg2" />
                   <img src={banneralimenticon3} alt="" className="icomimg3" />
                   <img src={banneralimenticon4} alt="" className="icomimg4" />
                 </div>
