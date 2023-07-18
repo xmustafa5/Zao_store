@@ -123,8 +123,7 @@ the best quality  - <br/>  At our Vision Eye Clinic <br />
                 />
                
             
-               <img src={banneralimenticon4} alt=""                   className='icomimg4'
- />
+               <img src={banneralimenticon4} alt="" className='icomimg4'/>
               
               </div>
               

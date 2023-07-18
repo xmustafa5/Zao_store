@@ -1,0 +1,951 @@
+:root {
+    --fcolor: #17212b;
+    --scolor: #242f3d;
+    --hcolor: #344153;
+    --thcolor: #12d0c5;
+    --blcolor: #30a3e6;
+  }
+  
+  .drop-anim {
+    animation: drop 2.5s infinite;
+  }
+  
+  @keyframes drop {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  .smoothzigzaganim1 {
+    animation: icon1 5s linear infinite;
+  }
+  @keyframes icon1 {
+    0%,
+    100% {
+      transform: translate(0);
+    }
+    25% {
+      transform: translate(10px, 10px);
+    }
+    50% {
+      transform: translate(5px, 5px);
+    }
+    75% {
+      transform: translate(10px, -5px);
+    }
+  }
+  
+  .smoothzigzaganim2 {
+    animation: icon2 5s linear infinite;
+  }
+  @keyframes icon2 {
+    0%,
+    100% {
+      transform: translate(0);
+    }
+    25% {
+      transform: translate(-10px, -10px);
+    }
+    50% {
+      transform: translate(-5px, -5px);
+    }
+    75% {
+      transform: translate(-10px, 5px);
+    }
+  }
+  .smoothzigzag-anim3 {
+    animation: icon3 5s linear infinite;
+  }
+  @keyframes icon3 {
+    0%,
+    100% {
+      transform: translate(0);
+    }
+    25% {
+      transform: translate(-7px, -7px);
+    }
+    50% {
+      transform: translate(-14px, -14px);
+    }
+    75% {
+      transform: translate(-7px, -7px);
+    }
+  }
+  .pulse-anim {
+    animation: pulse 3s linear infinite;
+  }
+  @keyframes pulse {
+    0%,
+    70% {
+      box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 1);
+    }
+    100% {
+      box-shadow: 0 0 0 15px transparent;
+    }
+  }
+  .home {
+    background-color: var(--scolor);
+  }
+  
+  .home22 {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding-top: 70px;
+    padding: 50px 15px 0;
+    display: block;
+  }
+  .home22::before {
+    content: "";
+    position: absolute;
+    bottom: -200px;
+    left: -400px;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 80%;
+    background: radial-gradient(
+      ellipse at center,
+      hsla(217, 76%, 49%, 0.5),
+      transparent 70%
+    );
+  }
+  .home22::after {
+    content: "";
+    position: absolute;
+    z-index: 100 !important ;
+    top: 100px;
+    right: -400px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: radial-gradient(
+      ellipse at center,
+      hsla(175, 82%, 46%, 0.3),
+      transparent 70%
+    );
+  }
+  .shape1,
+  .shape2,
+  .shape6,
+  .shape3,
+  .shape5,
+  .shape7,
+  .shape8,
+  .shape4 {
+    position: absolute;
+  }
+  .shape1 {
+    animation: icon3 6s linear infinite;
+    top: 3%;
+    left: 77%;
+  }
+  .shape2 {
+    animation: icon1 4s linear infinite;
+    top: 400px;
+    right: 280px;
+  }
+  .shape3 {
+    animation: icon1 10s linear infinite;
+    top: 555px;
+    right: 0;
+  }
+  
+  .shape4 {
+    position: absolute;
+    top: 470px;
+    right: 1010px;
+  }
+  .shape5 {
+    z-index: 4;
+    animation: icon1 6s linear infinite;
+    top: 100px;
+    right: 1210px;
+  }
+  .shape6 {
+    animation: icon2 5s linear infinite;
+    z-index: 5;
+    top: 100px;
+    right: 1210px;
+  }
+  .shape7 {
+    animation: icon2 7s linear infinite;
+    z-index: 3;
+    top: 130px;
+    right: 1210px;
+  }
+  .shape8 {
+    z-index: 6;
+    top: 200px;
+    right: 1280px;
+  }
+  
+  /**/
+  .homeleft {
+    position: relative;
+    z-index:    112;
+  
+    width: 100%;
+  }
+  
+  .homeright {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  .icon {
+    position: relative;
+    z-index: 88;
+  }
+  .icon11 {
+    position: relative;
+    top: -100px !important;
+    left: 10px;
+  }
+  
+  
+  
+  
+  .icomimg1 {
+    animation: icon1 5s linear infinite;
+    height: 20px !important;
+    width: 111px !important
+       ;
+  }
+  .icomimg2 {
+    animation: icon2 5s linear infinite !important;
+    height: 20px !important;
+    width: 81px !important;
+    display: block;
+    position: absolute;
+    top: -160px !important;
+    left: 200px !important;
+  }
+  .icomimg3 {
+    animation: icon3 4s linear infinite;
+    height: 20px !important;
+    width: 70px !important;    position: absolute;
+    top: 20px;
+    left: 230px;
+  }
+  .icomimg4 {
+    animation: drop 2.5s infinite;
+    height: 20px !important;
+    width: 20px !important;
+    display: block;
+    position: absolute;
+    top: -110px;
+    left: 100px;
+  }
+  .icon2 {
+    animation: icon2 5s linear infinite;
+    position: absolute;
+    top: 400px;
+    right: 100px;
+    height: 30px !;
+    width: 170px;
+  }
+  .icon3 {
+    animation: icon3 4s linear infinite;
+    position: absolute;
+    top: 250px;
+    right: -90px;
+    height: 30px;
+    width: 140px;
+  }
+  .icon4 {
+    animation: drop 2.5s infinite;
+    position: absolute;
+    top: 66px;
+    left: -101px;
+    height: 80px;
+    width: 70px;
+  }
+  
+  .stitle {
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: var(--thcolor);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .sectionsubtitle {
+    display: flex;
+    justify-content: center;
+    color: var(--blcolor);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  
+    margin-bottom: 25px;
+    margin-left: 40px;
+  }
+  .mainheading span {
+    display: flex;
+    justify-content: center;
+  }
+  .mainheading {
+    display: block;
+  
+    color: var(--blcolor);
+    font-size: 27px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .underlineimgimg {
+    position: absolute;
+    top: -10px;
+    left: 10;
+  }
+  .sectiontext {
+    margin-top: 1.5rem;
+    font-size: 19px;
+    line-height: 28px;
+    color: #fff;
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .homebtngroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .btntext {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 20px 45px;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+  .btntext {
+    position: relative;
+    z-index: 5;
+  }
+  
+  .btntext {
+    background: var(--blcolor);
+    transition: 0.7s ease;
+    color: #0a0a33 !important;
+    transition: all 250ms;
+  
+  }
+  .btntext:hover {
+    background-color: #17212b !important;  transform: translateY(-8px);
+    color: var(--blcolor ) !important;
+  }
+  
+  /**/
+  .sertc {
+    position: absolute;
+  }
+  .sert {
+    width: 100%; /*problem*/
+    position: absolute;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+  .backgroundshape {
+    position: absolute;
+    top: 200px;
+    width: auto;
+    max-width: 100%;
+    top: 30;
+    z-index: 1;
+  }
+  .rrr {
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+  .re {
+    z-index: 20;
+  }
+  .bannerimg {
+    z-index: 10;
+    height: 300px !important;
+    width: auto !important;
+  }
+  .square {
+    background: #0a0a33;
+  }
+  .bannerline {
+    width: 302;
+    height: auto;
+  }
+  .imgbox img {
+    height: 300px;
+    width: 300px;
+  }
+  .icon11 {
+    position: relative;
+    top: -100px;
+    left: -100px;
+
+  }
+  
+  /* .icon {
+  
+  
+   position: relative;
+      z-index: 5;
+    }
+     .icon1 {  animation: icon1 5s linear infinite; 
+      position: absolute;
+      top: 170px;
+      left: -600px;
+     
+    }
+    
+  
+     
+     .icon2{   animation: icon2 5s linear infinite;
+         position: absolute;  
+      top: 500px;
+      right: -200px; }
+     .icon3 {  animation: icon3 4s linear infinite;    position: absolute;
+      top: 250px;
+      right: -290px;
+      }
+    .icon4 { animation:   drop 2.5s infinite; 
+      position: absolute;
+      top: 66px;
+      left: -101px;
+      filter: drop-shadow(0 8px 30px hsla(350, 100%, 68%, 0.5));
+    }
+    .icon1, .icon2, .icon3, .icon4 {
+      filter: drop-shadow(0 10px 20px hsla(0, 0%, 0%, 0.2));
+      z-index: 5;
+    }    */
+  
+  /************3333333333333***************/
+  
+  @media (min-width: 375px) {
+    .home22 {
+        background-color: #12d0c5;
+      display: block;
+    }
+   
+    .shape1{
+      top: 3%;
+      left: 69%;
+    }
+  
+    .mainheading {
+      font-size: 30;
+    }
+    
+    .stitle {
+      font-size: 17px;
+    }
+    .shape2 {
+      animation: icon1 4s linear infinite;
+      top: 20%;
+    left: 20%;
+    width: 100%;
+    }
+    .shape3{
+      animation: none;
+      top: 30%;
+      z-index: 1;
+    }
+    .shape3 img{
+      width: 300px !important;
+    }
+    .shape4 {
+      position: absolute;
+      top: 470px;
+      right: 440px;
+    }
+    .icon11 {
+      position: relative;
+      top: -80px !important;
+      left: -110px;
+
+    }
+   
+  
+    
+  
+    .icomimg1 {
+      animation: icon1 5s linear infinite;
+      height: 40px !important;
+      width: 111px !important
+         ;
+    }
+    .icomimg2 {
+      animation: icon2 4s linear infinite !important;
+      height: 30px !important;
+      width: 91px !important;
+      position: absolute;
+      top: -160px !important;
+      left: 245px !important;
+    }
+    .icomimg3 {
+      animation: icon3 4s linear infinite;
+      height: 40px !important;
+      width: 101px !important;    position: absolute;
+      top: 20px;
+      left: 230px;
+    }
+    .icomimg4 {
+      animation: drop 2.5s infinite;
+      height: 40px !important;
+      width: 40px !important;
+      display: block;
+      position: absolute;
+      top: -140px;
+      left: 110px;
+    }
+  
+    .imgbox {
+      display: flex;
+      justify-content: center;
+      width: auto;
+    }
+    .imgbox img {
+      height: 330px;
+      width: 330px;
+    }
+    .bannerimg {
+      height: 340px !important;
+    }
+  }
+  .btntext {
+    padding: 11px 35px !important;
+    font-size: 14px !important;
+  }
+  /****************55555555555555555555**************/
+  
+  @media (min-width: 575px) {
+    .home22 {
+        background-color: #192780;
+
+      display: block;
+    }
+    .imgbox img {
+      height: 400px;
+      width: 400px;
+    }
+    .shape1{
+      top: 3%;
+      left: 66%;
+      
+    }
+    .bannerimg {
+      z-index: 10;
+      height: 480px !important;
+      width: auto !important;
+    }
+    .mainheading {
+      font-size: 35px;
+    }
+    .stitle {
+      font-size: 20px;
+    }
+  
+    .shape2 {
+      animation: icon1 4s linear infinite;
+      top: 38%;
+    left: 53%;
+    }
+    .shape3{
+      animation: none;
+      top: 30%;
+      z-index: 1;
+    }
+    .shape3 img{
+      width: 300px !important;
+    }
+    .shape4 {
+      position: absolute;
+      top: 470px;
+      right: 601px;
+    }
+  
+    .icon11 {
+      position: relative;
+      top: -100px;
+      left: -150px;
+      left: -160px;
+
+    }
+  
+    .icomimg1 {
+      animation: icon1 5s linear infinite;
+      height: 60px !important;
+      width: 181px !important
+    }
+    .icomimg2 {
+      animation: icon2 4s linear infinite !important;
+      height: 50px !important;
+      width: 151px !important;
+      position: absolute;
+      top: -230px !important;
+      left: 350px !important;
+    }
+    .icomimg3 {
+      animation: icon3 4s linear infinite;
+      height: 50px !important;
+      width: 151px !important;
+      display: flex;
+      position: absolute;
+      top: 40px;
+      left: 350px;
+    }
+    .icomimg4 {
+      animation: drop 2.5s infinite;
+      height: 50px !important;
+      width: 51px !important;
+      position: absolute;
+      top: -310px;
+      left: 150px;
+    }
+  
+  
+    .imgbox {
+      display: flex;
+      justify-content: center;
+      width: auto;
+    }
+  
+    .shape1 img {
+      width: 100px; 
+    }
+    .shape3 img {
+      width: 250px;
+     
+  
+    }
+  
+    .contact {
+      margin-top: 40px;
+    }
+    .contact h2 {
+      font-size: 37px;
+    }
+  }
+  @media (min-width: 767px) {
+    .category .courseitemgroup,
+    .coursegrid,
+    .instructorgrid,
+    .footergrid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .contactcard {
+      padding: 40px 60px;
+    }
+  }
+  
+  /****************9999999999999999999999999**************/
+  
+  @media (min-width: 992px) {
+    .home22 {
+        background-color: #2b1129;
+
+      display: flex;
+    }
+    .imgbox img {
+      height: 400px;
+      width: 400px;
+    }
+    .shape1{
+      top: 3%;
+      left: 40%;
+    }
+    .bannerimg {
+      z-index: 10;
+      height: 460px !important;
+      width: auto !important;
+    }
+    .mainheading {
+      font-size: 38px;
+    }
+    .stitle {
+      font-size: 24px;
+    }
+    .shape2 {
+      animation: icon1 4s linear infinite;
+      top: 65%;
+    left: 40%;
+    
+    }
+    .shape3{
+      animation: none;
+      top: 10%;
+      z-index: 1;
+      right:  0 !important;
+      
+    }
+    .shape3 img{
+      width: 200px !important;
+      transform: none;
+    }
+    .icon {
+      position: relative;
+      z-index: 119;
+    }
+    .icon11 {
+      position: relative;
+      top: -100px;
+      left: -140px;
+
+    }
+  
+    .icomimg1 {
+      animation: icon1 5s linear infinite;
+      height: 60px !important;
+      width: 181px !important
+         ;
+    }
+    .icomimg2 {
+      animation: icon2 4s linear infinite !important;
+      height: 50px !important;
+      width: 121px !important;
+      position: absolute;
+      top: -210px;
+      left: 350px;
+    }
+    .icomimg3 {
+      animation: icon3 4s linear infinite !important;
+      height: 50px !important;
+      width: 121px !important;
+      position: absolute;
+      top: 40px;
+      left: 350px;
+    }
+    .icomimg4 {
+      animation: drop 2.5s infinite;
+      height: 50px !important;
+      width: 50px !important;
+      position: absolute;
+      top: -310px;
+      left: 150px;
+    }
+    .icon2 {
+      animation: icon2 5s linear infinite;
+      position: absolute;
+      top: -100px;
+      left: 10px;
+    }
+    .icon3 {
+      animation: icon3 4s linear infinite;
+      position: absolute;
+      top: 250px;
+      right: -190px;
+      width: 161px;
+    }
+    .icon4 {
+      animation: drop 2.5s infinite;
+      position: absolute;
+      top: 66px;
+      left: -101px;
+      filter: drop-shadow(0 8px 30px hsla(350, 100%, 68%, 0.5));
+    }
+  
+    .navbar {
+      padding: 20px 15px;
+    }
+  
+    .imgbox {
+      display: flex;
+      justify-content: center;
+      width: auto;
+    }
+    .home22::before {
+      top: 00px;
+      left: -450px;
+    }
+    .home22::after {
+      top: 0;
+    }
+  
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      gap: 40px;
+    }
+    .aboutleft {
+      margin-left: -70px;
+    }
+    .aboutleft img {
+      max-width: unset;
+    }
+    .aboutright {
+      padding-top: 0;
+    }
+    .course {
+      position: relative;
+    }
+  
+    .course-grid {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 0;
+    }
+    .course .btnprimary {
+      position: absolute;
+      top: 130px;
+      right: 80px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .featuresright {
+      height: auto;
+    }
+  
+    .testimonials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+  }
+  @media (min-width: 1200px) {
+    .home22 {
+        background-color: #6d9816;
+
+      display: flex;
+    }
+    .imgbox img {
+      height: 450px;
+      width: 450px;
+    }
+  
+    .shape2{
+      top: 60%;
+    left: 37%;
+    }
+    .shape3{
+      animation: none;
+      top: 10%;
+      z-index: 1;
+    }
+    .shape3 img{
+      width: 300px !important;
+     
+      transform: none;
+    }
+    .bannerimg {
+      z-index: 10;
+      height: 480px !important;
+      width: auto !important;
+    }
+  
+    .homeleft {
+      padding-bottom: 80px;
+    }
+    .sectiontext {
+      font-size: 18px;
+    }
+  
+    .category .courseitemgroup {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .instructorgrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .contactcard h2 {
+      font-size: 45px;
+    }
+    .icon11 {
+      position: relative;
+      top: -100px;
+      left: -150px;
+    }
+   
+    .icomimg1 {
+      animation: icon1 5s linear infinite;
+      height: 60px !important;
+      width: 181px !important
+    }
+    .icomimg2 {
+      animation: icon2 4s linear infinite !important;
+      height: 40px !important;
+      width: 121px !important;
+      position: absolute;
+      top: -210px;
+      left: 350px;
+    }
+    .icomimg3 {
+      animation: icon3 4s linear infinite !important;
+      height: 60px !important;
+      width: 121px !important;
+      display: flex !important;
+      position: absolute;
+      top: 50px;
+      left: 350px;
+    }
+    .icomimg4 {
+      animation: drop 2.5s infinite;
+      height: 50px !important;
+      width: 50px !important;
+      position: absolute;
+      top: -310px;
+      left: 150px;
+    }
+  }
+  @media (min-width: 460px) {
+    .contact {
+      margin-top: 30px;
+    }
+  }
+  @media (min-width: 300px) {
+    .contact {
+      margin-top: 30px;
+    }
+    
+    .icon2 {
+      animation: icon2 5s linear infinite;
+      position: absolute;
+      top: -100px;
+      left: 10px;
+    }
+    .icon3 {
+      animation: icon3 4s linear infinite;
+      position: absolute;
+      top: 250px;
+      right: -190px;
+      width: 161px;
+    }
+    .icon4 {
+      animation: drop 2.5s infinite;
+      position: absolute;
+      top: 66px;
+      left: -101px;
+      filter: drop-shadow(0 8px 30px hsla(350, 100%, 68%, 0.5));
+    }
+  }
+  
