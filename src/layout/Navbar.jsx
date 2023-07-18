@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { links } from '../utils/data';
 import { Link } from 'react-router-dom';
-import BurgerMenu from '../assests/menu.png';
-import logo from '../assests/logo.png';
-import CloseMenu from '../assests/close.png'; // Import the close icon
+import BurgerMenu from '../assets/menu.png';
+import logo from '../assets/logo.png';
+import CloseMenu from '../assets/close.png'; // Import the close icon
 import "./Navbar.css"
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
