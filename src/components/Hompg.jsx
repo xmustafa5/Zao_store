@@ -35,7 +35,7 @@ const Hompg = () => {
         
         </div>
         <div className={"homeleft"}>
-          <p className={"stitle"}>Welcome to our Clinic</p>
+          <p className={"stitle"}>اهلا بكم في zao stor</p>
 
           <h1
             className={"mainheading"}
