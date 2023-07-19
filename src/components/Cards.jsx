@@ -50,8 +50,8 @@ const Cards = ({title,prices,imgUrl,products}) => {
               </button> */}
 
               <div className={"homebtngroup1"}>
-                <button className={"btnbtnprimary"} >
-                  <p className={"btntext1"}>Buy</p>
+                <button className={"btnbtnprimary"} onClick={handleBuyProduct} >
+                  <p className={"btntext1"} >Buy</p>
                   <span className={"square"}></span>
                 </button>
               </div>
@@ -62,10 +62,10 @@ const Cards = ({title,prices,imgUrl,products}) => {
 
       {isOverlayVisible && <div className="overlay"></div>}
       {isPopupOpen && (
-        <div className="modal">
+        <div className="modal" >
           <div onClick={handleBuyProduct} className="overlay"></div>
-          <div className="modal-content">
-            <Popup
+          <div className="modal-content  ">
+            <Popup  
               handleBuyProduct={handleBuyProduct}
               selectedProduct={selectedProduct}
               products={products}

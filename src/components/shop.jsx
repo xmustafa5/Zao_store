@@ -31,7 +31,7 @@ const Shop = () => {
             
             <h2>اشتري ما يعجبك</h2>
           </div>
-          <div className="r">
+          <div className="r" >
       {products.map((product) => (
         <Cards
           key={product.id}
