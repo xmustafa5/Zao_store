@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Popup from "./Popup";
 import "./cards.css"
-const Cards = ({title,imgUrl,products}) => {
+const Cards = ({title,prices,imgUrl,products}) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [price, setPrice] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -38,7 +38,7 @@ const Cards = ({title,imgUrl,products}) => {
               
               </strong>
               <div className="prices">
-                <p className="iopp">{price}$</p>
+                <p className="iopp">{prices}$</p>
               </div>
             </div>
             <div className="fexbtn">

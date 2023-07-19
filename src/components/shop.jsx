@@ -37,7 +37,7 @@ const Shop = () => {
           key={product.id}
           title={product.title}
           imgUrl={product.imgUrl}
-          price={product.price}
+          prices={product.price}
           products={products} // Pass the array of products as a prop
         />
       ))}
