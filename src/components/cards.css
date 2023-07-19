@@ -1,0 +1,224 @@
+:root {
+    --fcolor: #17212b;
+    --scolor: #242f3d;
+    --thcolor: #12d0c5;
+    --blcolor: #30a3e6;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    color: #3a6cfc;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; /*ينزل الكروت بالرسبومسف*/
+  }
+  .cards {
+    background-color: #fd0606;
+  }
+  
+  /**/
+  .card:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+  .icon {
+    color: #3a6cfc;
+    font-size: 8em;
+    text-align: center;
+  }
+  .info {
+    text-align: center;
+  }
+  .info h3 {
+    color: #3a6cfc;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+  }
+  
+  .projcard {
+    background-color: var(--scolor);
+    border: 1px solid var(--scolor);
+    min-height: 14em;
+    width: 20em;
+    overflow: hidden; /**/
+    border-radius: 10px;
+    margin: 20px;
+    /* transition: all 0.7s ease; */
+   top: 0;
+  position: relative;  transition: all 0.3s ease-out;
+  
+  }
+  
+  .projcard:hover {
+    /* box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2); */
+    top: -4px;
+    border: 1px solid #17212b;
+    box-shadow: rgba(11, 130, 122, 0.222) 0px 10px 15px -3px,
+    rgba(0, 137, 168, 0.1) 0px 4px 6px -2px;
+  }
+  
+  
+  .projimg {
+    width: 100%; /* Adjust the width and height as per your requirement */
+    height: 200px;
+    margin: 20px;
+    background-size: cover; /*غلمود تتعدل*/
+    background-position: center; /*غلمود تتعدل*/
+    overflow: hidden; /* Hide any overflow of the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ssss{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+  
+  }
+  .imgglasses{
+    width: 100px !important;
+  }
+  .projinfo {
+    padding: 0.7em;
+  }
+  .projinfo:hover {
+    color: black;
+  }
+  .iopp {
+    font-size: 0.8em;
+    color: var(--blcolor);
+  }
+  .projtitle {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .titlecard {
+    color: #fff;
+  }
+  .mpre {
+    text-decoration: none;
+    color: red;
+  }
+  .mpre:hover {
+    color: #ffff;
+  }
+  
+  /* Customize the color of the radio dot when selected */
+  
+  .radio-button {
+    border: none;
+    background-color: transparent ;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: solid 0.1px var(--fcolor);
+    transition: all 0.7s ease;
+    border-radius: 10px;
+    color: #fff;
+  }
+  
+  .radio-button.active {
+    transition: all 0, 7s ease;
+    background-color: var(--fcolor);
+    color: var(--thcolor) !important;
+    
+  }
+  .prices {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .prices p {
+    font-size: 16px;
+  }
+  @media (min-width: 321px) and (max-width: 767px) {
+    .projcard:hover {
+      transform: none;
+    }
+  }
+  /* Customize the color of the radio dot when the radio is checked */
+  /* CSS */
+  .fexbtn {
+    display: grid;
+    place-content: center;
+    padding: 5px;
+  }
+  .button-29 {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(
+      100% 100% at 100% 0%,
+      var(--thcolor) 0,
+      var(--blcolor) 100%
+    );
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 17px 13px -3px,
+      rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 40px;
+    justify-content: center;
+    line-height: 1;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
+    font-size: 16px;
+  }
+  
+  .button-29:focus {
+    box-shadow: var(--thcolor) 0 0 0 1.5px inset, rgba(1, 217, 250, 0.4) 0 2px 4px,
+      rgba(12, 215, 255, 0.3) 0 7px 13px -3px, var(--thcolor) 0 -3px 0 inset;
+  }
+  
+  .button-29:hover {
+    box-shadow: rgba(0, 221, 255, 0.4) 0 4px 8px,
+      rgba(5, 255, 255, 0.3) 0 7px 13px -3px, var(--thcolor) 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .button-29:active {
+    box-shadow: var(--thcolor) 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  
+  .boxs {
+    /* box-shadow: rgba(6, 209, 255, 0.25) 0px 6px 12px -2px, rgba(1, 238, 223, 0.3) 0px 3px 7px -3px;} */
+    /* box-shadow: rgba(6, 209, 255, 0.25) 0px 14px 28px, rgba(1, 238, 223, 0.22) 0px 10px 10px; */
+    /* box-shadow: rgba(6, 209, 255, 0.16) 0px 3px 6px, rgba(1, 238, 223, 0.23) 0px 3px 6px; */
+    /* box-shadow: rgba(1, 224, 249, 0.15) 0px 48px 100px 0px; */
+    /* box-shadow: rgba(8, 228, 41, 0.273) 0px 0px 0px 1px; */
+    box-shadow: rgba(6, 209, 255, 0.1) 0px 10px 15px -3px,
+      rgba(1, 238, 223, 0.05) 0px 4px 6px -2px;
+  }
+  

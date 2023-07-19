@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Popup from "./Popup";
-
+import "./cards.css"
 const Cards = ({title,imgUrl,products}) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [price, setPrice] = useState(null);
