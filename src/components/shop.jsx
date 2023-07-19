@@ -1,15 +1,11 @@
-import React from 'react'
-import Cards from './Cards';
 import React, { useState, useEffect } from "react";
-import {
-  collection,
-  getDocs,
-  addDoc,
-  doc,
-  updateDoc,
-} from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+import Cards from "./Cards";
+
 const Shop = () => {
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -27,26 +23,20 @@ const Shop = () => {
 
     fetchProducts();
   }, []);
+
   return (
     <div>
-      
-      <Card
-                key={product.id}
-                title={product.title}
-                color1={product.color1}
-                color2={product.color2}
-                imageUrl1={product.imageUrl1}
-                imageUrl2={product.imageUrl2}
-                price={product.price}
-                basketItems={basketItems}
-                addToBasket={handleAddToBasket}
-                setPopupMessage={setPopupMessage}
-                setShowPopup={setShowPopup}
-                handlePopupToggle={handlePopupToggle}
-              />
-            ))}
+      {products.map((product) => (
+        <Cards
+          key={product.id}
+          title={product.title}
+          imgUrl={product.imgUrl}
+          price={product.price}
+          products={products} // Pass the array of products as a prop
+        />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Shop
+export default Shop;
