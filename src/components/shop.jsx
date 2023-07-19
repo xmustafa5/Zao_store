@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import Cards from "./Cards";
-
+import "./buttoncss.css"
 const Shop = () => {
   const [products, setProducts] = useState([]);
 
@@ -26,6 +26,12 @@ const Shop = () => {
 
   return (
     <div>
+          <section className="pro" id="shop">
+          <div className="fex titles">
+            
+            <h2>اشتري ما يعجبك</h2>
+          </div>
+          <div className="r">
       {products.map((product) => (
         <Cards
           key={product.id}
@@ -35,7 +41,10 @@ const Shop = () => {
           products={products} // Pass the array of products as a prop
         />
       ))}
+
     </div>
+        </section> 
+           </div>
   );
 };
 

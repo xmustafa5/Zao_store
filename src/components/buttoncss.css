@@ -1,0 +1,54 @@
+:root {
+  --fcolor: #1f59b9;
+  --scolor: #182557;
+  --hcolor: #3d3799;
+  --thcolor: #f47324;
+  --blcolor: #2d6acd;
+}
+  
+.homebtngroup1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .btntext1 {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 10px 45px;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+  .btntext1 {
+    position: relative;
+    z-index: 5;
+  }
+  
+  .btntext1 {
+    background: #30a3e6;
+    transition: 0.7s ease;
+    color: #17212b !important;
+    transition: all 250ms;
+  
+  }
+  .btntext1:hover {
+    background-color: #17212b !important;  transform: translateY(-8px);
+    color: #12d0c5 !important;
+  }
+  .btntext2{
+    font-size: 14px;
+    padding: 2px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+   
+}
+.btntext2:focus{
+    transition: all 0, 7s ease;
+    
+}

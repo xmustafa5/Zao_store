@@ -13,3 +13,304 @@
   text-decoration: none;
 }
 
+/*card*/
+.fex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titles {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--thcolor);
+}
+.pro {
+  background-color: var(--fcolor);
+}
+section {
+  /*راح يطبق علئ اي سكشن بالبدي كله*/
+  padding: 70px 200px;
+}
+.r {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap; /*ينزل الكروت بالرسبومسف*/
+}
+.ccc{
+  height: 100vh;
+}
+/* Styles for devices with a width between 321px and 767px */
+@media (min-width: 111px ) and (max-width: 370px) {
+  section{ 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  .projcard{
+    width: 16rem;
+  }
+  
+  .radio-button{
+    font-size: 14px !important;
+  }
+  .titlecard{
+    font-size: 14px;
+  }
+  hr{
+    border-top: 1px solid var(--blcolor) !important;
+    width: 80px  !important;
+    padding: 4px;
+  }
+  
+  .fot a{
+    background-color: var(--blcolor);
+    padding: 2px;margin: 10px !important;
+    border-radius: 10px;
+    color: var(--scolor) !important;
+    display: grid;
+    place-items: center;
+    transition:   0.7 ease-in-out;
+  
+  }
+  .fot a:hover{
+    transform: translateY(-10);
+    background-color: var(--fcolor);
+    color: var(--thcolor) !important;
+    transform: translateY(-4px);
+  
+  }
+  .fott{
+    display: flex;
+    justify-content: center;
+  gap: 3px;
+  font-size: 14px;
+  }
+  .modal-content{
+    width: 290px;
+  height: 490px; gap: 0;  }
+  .input33{
+    width: 70%;
+    height: 40px;
+    padding: 0 !important;
+  }
+  
+   
+  .downselec{
+    width: 70%;
+  
+  }
+  .inputsr{
+    width: 50px !important;
+    height: 40px;
+  
+  }
+  .sels{
+  width: 70%;
+  }
+  .erwq{
+  margin-bottom: 4px;
+  margin-top: 10px;
+  gap: 14px !important;
+  }
+  
+  }
+  /* outmedit */
+  
+  @media ( min-width: 370px) and (max-width: 570px) {
+    section{
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+    }
+    .projcard{
+      width: 19rem;
+    }
+    .radio-button{
+      font-size: 14px !important;
+    }
+    .titlecard{
+      font-size: 14px;
+    }
+    hr{
+      border-top: 1px solid var(--blcolor) !important;
+      width: 80px  !important;
+      padding: 4px;
+    }
+    
+    .fot a{
+      background-color: var(--blcolor);
+      padding: 2px;margin: 10px !important;
+      border-radius: 10px;
+      color: var(--scolor) !important;
+      display: grid;
+      place-items: center;
+      transition:   0.7 ease-in-out;
+    
+    }
+    .fot a:hover{
+      transform: translateY(-10);
+      background-color: var(--fcolor);
+      color: var(--thcolor) !important;
+      transform: translateY(-4px);
+    
+    }
+    .fott{
+      display: flex;
+      justify-content: center;
+    gap: 3px;
+    font-size: 16px;
+    }
+    .modal-content{
+      width: 320px;
+    height: 490px; gap: 0;  }
+    .input33{
+      width: 70%;
+      height: 40px;
+      padding: 0 !important;
+      outline: none !important;
+    }
+  
+     
+    .downselec{
+      width: 70%;
+  
+    }
+    .inputsr{
+      width: 50px !important;
+      height: 40px;
+  
+    }
+   .sels{
+    width: 70%;
+   }
+   .erwq{
+    margin-bottom: 4px;
+    margin-top: 10px;
+    gap: 14px !important;
+   }
+   
+    }
+  
+  
+  /* Styles for devices with a width between 321px and 767px */
+  @media (min-width: 570px) and (max-width: 770px) {
+    section{
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+    }
+    .projcard{
+      width: 20rem;
+    }
+    .radio-button{
+      font-size: 14px !important;
+    }
+    .titlecard{
+      font-size: 14px;
+    }
+    nav{
+      margin-right: 60px !important;
+    }
+    nav a{
+      margin-right: 20px !important;
+      font-size: 18px;
+    }
+    .logo {
+      font-size: 22px !important;
+      margin-left: 27px;
+    }
+    .modal-content{
+      width: 360px;   }
+    .input33{
+      width: 80%;
+      height: 40px;
+    }
+   
+    .downselec{
+      width: 80%;
+    }
+    .inputsr{
+      width: 60px !important;
+    }
+   .sels{
+    width: 80%;
+   }
+  
+  
+    
+    }
+  
+  /* Styles for devices with a width between 768px and 1023px */
+  @media (min-width: 770px) and (max-width: 992px) {
+    section{
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+    }
+    .projcard{
+      width: 20rem;
+    }
+    .radio-button{
+      font-size: 14px !important;
+    }
+    .titlecard{
+      font-size: 14px;
+    }
+    nav{
+      margin-right: 80px !important;
+    }
+    nav a{
+      margin-right: 30px !important;
+      font-size: 20px;
+    }
+    .logo {
+      font-size: 28px !important;
+      margin-left: 100px;
+    }
+  
+  }
+  @media (min-width: 992px) and (max-width: 1095px)  {
+    section{
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      
+    }
+    .projcard{
+      width: 22rem;
+    }
+    .radio-button{
+      font-size: 14px !important;
+    }
+    .titlecard{
+      font-size: 14px;
+    }
+    nav{
+      margin-right: 110px !important;
+    }
+    nav a{
+      margin-right: 50px !important;
+      font-size: 20px;
+    }
+   
+  }
+  /* Styles for devices with a width of 1024px or larger */
+  @media (min-width: 1095px) and (max-width: 1600px)  {
+    section{
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+    }
+    .projcard{
+      width: 22rem;
+    }
+    .radio-button{
+      font-size: 14px !important;
+    }
+    .titlecard{
+      font-size: 14px;
+    }
+  }
