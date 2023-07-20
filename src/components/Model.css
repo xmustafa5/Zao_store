@@ -28,6 +28,7 @@
     background: rgba(49, 49, 49, 0.503);   
 
 }
+
 .modal-content {
     position: absolute;
     top: 50%;
@@ -47,3 +48,15 @@
     right: 10px;
     padding: 5px 7px;
 }
+.form{
+    direction: rtl;
+}
+.containetinput{
+    font-size: 18px;
+}
+.discontinput{
+    direction: rtl;
+}
+.inp {
+    width: 400px !important;
+  }

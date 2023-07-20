@@ -2,6 +2,7 @@ import React, { useState,useEffect} from 'react'
 import { collection, getDocs, addDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import "./Model.css"
+import "./Model.css"
 const Popup = ({
   setPrice,
   price,
@@ -76,7 +77,7 @@ const Popup = ({
     };
   return (
 
-<form  onSubmit={handleSubmit}>
+<form  onSubmit={handleSubmit} className='form'>
   {/* <h3>{selectedProduct.title}</h3>
   <img
     src={selectedProduct.imgUrl}
@@ -86,54 +87,59 @@ const Popup = ({
   <p>Price: ${price}</p>
   Display the price */}
 
-<div class="mb-6 ">
-    <label for="default-input" class="block mb-2 text-md font-medium text-gray-900 dark:text-white">الاسم</label>
-    <input placeholder="name" type="text" id="default-input" class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+<div className="mb-5  inp  ">
+
+    <label for="default-input" class="block mb-2 containetinput  font-medium text-gray-900 dark:text-white">الاسم</label>
+    <input  value={name}
+    onChange={(e) => setName(e.target.value)} placeholder="name" type="text" id="default-input" class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
 </div>
-<div class="mb-6">
-    <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white  rtl:">العنوات</label>
-    <input type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+<div class="mb-5">
+    <label for="default-input" class="block mb-2  containetinput text-gray-900 dark:text-white  rtl:">العنوان</label>
+    <input  value={location}
+    onChange={(e) => setLocation(e.target.value)} type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
 </div>
-<div class="mb-6">
-    <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Default input</label>
-    <input type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+<div class="mb-5">
+    <label for="default-input" class="block mb-2  containetinput text-gray-900 dark:text-white">رقم الهاتف</label>
+    <input     value={number}
+    onChange={(e) => setNumber(e.target.value)} type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
 </div>
-<div class="mb-6">
-    <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Default input</label>
-    <input type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-</div>
-  <input
+<div class="mb-5">
+<label for="default-input" class="block mb-2  containetinput text-gray-900 dark:text-white"> كود الخصم</label>
+    <div class="relative discontinput">
+       
+        <input  value={discountCode}
+    onChange={handleDiscountCodeChange} type="search" id="search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="كود الخصم" />
+        <button onClick={applyDiscountCode} type="submit"  class="text-white absolute left-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">تاكيد</button>
+    </div>
+    </div>
+  {/* <input
     type="text"
-    value={name}
-    onChange={(e) => setName(e.target.value)}
+   
     placeholder="Name"
     required
   />
   <input
     type="text"
-    value={location}
-    onChange={(e) => setLocation(e.target.value)}
+   
     placeholder="Location"
     required
   />
   <input
     type="tel"
-    value={number}
-    onChange={(e) => setNumber(e.target.value)}
+
     placeholder="Number"
     required
   />
   <input
     type="text"
-    value={discountCode}
-    onChange={handleDiscountCodeChange}
+   
     placeholder="Discount Code"
     required
-  />
-  <button type="button" onClick={applyDiscountCode}>
+  /> */}
+  {/* <button type="button" >
     Apply Code
-  </button>
-  <button type="submit">Buy Now</button>
+  </button> */}
+  <button type="submit" className='textbtn1'>طلب الان</button>
 </form>
   )
 }
