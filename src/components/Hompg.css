@@ -441,7 +441,6 @@ direction: rtl;  }
     z-index: 110;
     height: 300px !important;
     width: auto !important;
-    transform: ;
   }
   .square {
     background: #0a0a33;
