@@ -316,6 +316,7 @@
   }
   
   .stitle {
+    padding-top: 0px;
     text-align: center;
     align-items: center;
     margin-top: 10px;
@@ -538,6 +539,7 @@ direction: rtl;  }
     
     .stitle {
       font-size: 17px;
+      padding-top: 20px;
     }
     .shape2 {
       animation: icon1 4s linear infinite;
@@ -660,6 +662,8 @@ direction: rtl;  }
     }
     .stitle {
       font-size: 20px;
+      padding-top: 0px;
+
     }
   
     .shape2 {
@@ -810,6 +814,8 @@ direction: rtl;  }
     }
     .stitle {
       font-size: 24px;
+      padding-top: 0px;
+
     }
     .shape2 {
       animation: icon1 4s linear infinite;
