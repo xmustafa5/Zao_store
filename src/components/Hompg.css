@@ -441,7 +441,6 @@ direction: rtl;  }
     z-index: 110;
     height: 300px !important;
     width: 300px !important;
-    background-color: red;
   }
   .square {
     background: #0a0a33;
@@ -595,7 +594,6 @@ direction: rtl;  }
     }
     .bannerimg {
       height: 310px !important;
-      background-color: #e1702f;
       width: 357px !important;
     }
   }
@@ -625,7 +623,6 @@ direction: rtl;  }
       z-index: 110;
       height: 480px !important;
       width: auto !important;
-      background-color: #fff;
     }
     .mainheading {
       font-size: 35px;
@@ -746,7 +743,6 @@ direction: rtl;  }
       z-index: 110;
       height: 450px !important;
       width: 518px !important;
-      background-color: transparent;
     }
     .mainheading {
       font-size: 38px;
@@ -921,7 +917,6 @@ direction: rtl;  }
       z-index: 110;
       height: 480px !important;
       width: auto !important;
-      background-color: #3d3799;
     }
   
     .homeleft {
