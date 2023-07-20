@@ -1,10 +1,10 @@
 :root {
-    --fcolor: #1f59b9;
-    --scolor: #182557;
-    --hcolor: #3d3799;
-    --thcolor: #f47324;
-    --blcolor: #2d6acd;
-  }
+  --fcolor: #1f59b9;
+  --scolor: #182557;
+  --hcolor: #3d3799;
+  --thcolor: #e1702f;
+  --blcolor: #e48b2a;
+}
   
   .drop-anim {
     animation: drop 2.5s infinite;

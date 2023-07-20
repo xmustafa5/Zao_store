@@ -2,8 +2,8 @@
     --fcolor: #1f59b9;
     --scolor: #182557;
     --hcolor: #3d3799;
-    --thcolor: #f47324;
-    --blcolor: #2d6acd;
+    --thcolor: #e1702f;
+    --blcolor: #e48b2a;
   }
 .active-modal {
     overflow-y: hidden;
@@ -80,4 +80,7 @@
 }
 .inp {
     width: 400px !important;
+  }
+  .check{
+    background-color: var(--blcolor) !important;
   }

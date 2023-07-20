@@ -161,7 +161,7 @@ const Popup = ({
           <button
             onClick={applyDiscountCode}
             type="submit"
-            class="text-white absolute left-2.5 bottom-2.5 bg-blue-100 hover:bg-blue-800 focus:ring-2  focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-yellow-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            class="text-white check absolute left-2.5 bottom-2.5 focus:ring-2  focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2  dark:focus:ring-blue-800"
           >
             تاكيد
           </button>

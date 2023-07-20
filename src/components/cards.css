@@ -1,9 +1,10 @@
 :root {
-    --fcolor: #17212b;
-    --scolor: #242f3d;
-    --thcolor: #12d0c5;
-    --blcolor: #30a3e6;
-  }
+  --fcolor: #1f59b9;
+  --scolor: #182557;
+  --hcolor: #3d3799;
+  --thcolor: #e1702f;
+  --blcolor: #e48b2a;
+}
   li {
     display: flex;
     justify-content: center;
