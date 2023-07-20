@@ -7,20 +7,23 @@ import banneralimenticon1 from "../assets/images/banner-aliment-icon-12.png";
 import banneralimenticon2 from "../assets/images/banner-aliment-icon-23.png";
 import banneralimenticon3 from "../assets/images/banner-aliment-icon-35.png";
 import banneralimenticon4 from "../assets/images/banner-aliment-icon-4.png";
+import logo from '../assets/images/LogoZao.png';
+import dotsBack from '../assets/images/botsBack1.png';
 import shape3 from "../assets/images/shape-31.png";
 import shape1 from "../assets/images/shape-11.png";
 import shape2 from "../assets/images/shape-2.png";
 import shape4 from "../assets/images/shape-4.png";
+import backLogo from "../assets/images/backlogoshape.png";
 import cta from "../assets/images/cta-bg-img1.png";
 import { Link } from "react-router-dom";
 
 import "./Hompg.css";
 const Hompg = () => {
   return (
-    <div className="home pt-10 ">
+    <div className="home  ">
       <div className={"home22"}>
         <div className={"shape"}>
-          <div className={"shape1"}>
+          {/* <div className={"shape1"}>
             <img src={shape1} alt="art shape1" width={70} />
           </div>
           <div className={"shape2"}>
@@ -31,9 +34,20 @@ const Hompg = () => {
           </div>
           <div className={"shape4"}>
             <img src={shape4} alt="art shape" width={50} height={64} />
+          </div> */}
+          <div className={"contbackLogo"}>
+            <img src={backLogo} alt="art shape" className="backLogo" />
+          </div>
+          <div className={"contdotsBack"}>
+            <img src={dotsBack} alt="art shape" className="dotsBack" />
           </div>
         </div>
         <div className={"homeleft"}>
+          <div className="logoo ">
+                    <img  className='logoImagee'  src={logo} alt="" /> 
+
+          </div>
+
           <p className={"stitle"}>اهلا بكم في zao stor</p>
 
           <h1
@@ -131,17 +145,18 @@ const Hompg = () => {
             </Link> */}
           </div>
         </div>
-        <div className={"homeright"}>
+
+        {/* <div className={"homeright"}>
           <div className={"imgbox"}>
             {/* <img src={bannerimgbg} alt="colorful background shape" className={backgroundshape} /> */}
-            <div className="rrr">
+            {/* <div className="rrr">
               <div className="re">
                 <img
                   src={bannerimg}
                   alt="banner img"
                   className="bannerimg"
                 />
-              </div>
+              </div> */}
               {/* <div className={"icon"}>
                 <div className={"icon11"}>
                   <img src={banneralimenticon1} alt="" className="icomimg1" />
@@ -150,7 +165,7 @@ const Hompg = () => {
                   <img src={banneralimenticon4} alt="" className="icomimg4" />
                 </div>
               </div> */}
-            </div>
+            {/* </div>
             <div className="sertc">
               <div className={"sert"}>
                 <img
@@ -161,7 +176,8 @@ const Hompg = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>  */}
+
       </div>
     </div>
   );

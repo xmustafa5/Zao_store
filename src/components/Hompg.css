@@ -95,13 +95,42 @@
   .home {
     background-color: var(--scolor);
   }
-  
+  .logoo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  .logoImagee{
+    width: 130px;
+   
+  }
+  .contbackLogo{
+    display: flex;
+   
+    position: absolute;
+    top: -20px;
+    right: 32%;
+   z-index: 1;
+  }
+  .backLogo{
+    width: 600px;
+  }
+  .contdotsBack{
+    position: absolute;
+    top: 20px;
+    right: 32%;
+  }
+  .dotsBack{
+    width: 600px;
+  }
   .home22 {
     margin: auto;
     overflow: hidden;
     position: relative;
     padding-top: 70px;
-    padding: 50px 15px 0;
+    padding: 40px 15px 0;
     display: block;
   }
   .home22::before {
@@ -280,7 +309,7 @@
     align-items: center;
     margin-top: 10px;
     margin-bottom: 20px;
-    color: var(--thcolor);
+    color: var(--fcolor);
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
