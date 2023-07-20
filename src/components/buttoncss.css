@@ -52,3 +52,31 @@
     transition: all 0, 7s ease;
     
 }
+
+.btntext3 {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 20px 45px;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.btntext3 {
+  padding: 6px 18px !important;
+  font-size: 22px !important;
+  font-weight: 500;
+}
+
+.btntext3 {
+  background: var(--blcolor);
+  transition: 0.7s ease;
+  color: #0a0a33 !important;
+  transition: all 250ms;
+
+}
+.btntext3:hover {
+  background-color: #17212b !important;  transform: translateY(-8px);
+  color: var(--blcolor ) !important;
+}
