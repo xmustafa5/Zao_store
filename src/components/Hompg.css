@@ -118,6 +118,8 @@
     position: absolute;
     top:  0;
     left: 0;
+    background-color: RED !important;
+
   }
   .bLogo{
     width: 160px;
@@ -510,7 +512,13 @@ direction: rtl;  }
     .home22 {
       display: block;
     }
-   
+    .backLogo{
+      position: absolute;
+      top:  0;
+      left: 0;
+      background-color: rgb(2, 243, 58) !important;
+  
+    }
     .shape1{
       top: 3%;
       left: 69%;
@@ -619,6 +627,13 @@ direction: rtl;  }
       left: 66%;
       
     }
+    .backLogo{
+      position: absolute;
+      top:  0;
+      left: 0;
+      background-color: rgb(9, 198, 251) !important;
+  
+    }
     .bannerimg {
       z-index: 110;
       height: 480px !important;
@@ -722,6 +737,13 @@ direction: rtl;  }
     .contactcard {
       padding: 40px 60px;
     }
+    .backLogo{
+      position: absolute;
+      top:  0;
+      left: 0;
+      background-color: rgb(234, 2, 255) !important;
+  
+    }
   }
   
   /****************9999999999999999999999999**************/
@@ -730,6 +752,13 @@ direction: rtl;  }
     .home22 {
 
       display: flex;
+    }
+    .backLogo{
+      position: absolute;
+      top:  0;
+      left: 0;
+      background-color: rgb(255, 247, 247) !important;
+  
     }
     .imgbox img {
       height: 400px;
@@ -898,7 +927,13 @@ direction: rtl;  }
       height: 450px;
       width: 450px;
     }
+    .backLogo{
+      position: absolute;
+      top:  0;
+      left: 0;
+      background-color: rgb(15, 7, 7) !important;
   
+    }
     .shape2{
       top: 60%;
     left: 37%;
