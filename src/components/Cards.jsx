@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import downShape from '../assets/images/shape-down-orange.png'
 import Popup from "./Popup";
 import "./cards.css"
 const Cards = ({title,prices,imgUrl,products}) => {
@@ -64,7 +64,8 @@ const Cards = ({title,prices,imgUrl,products}) => {
       {isPopupOpen && (
         <div className="modal" >
           <div onClick={handleBuyProduct} className="overlay"></div>
-          <div className="modal-content  ">
+          <div className="modal-content  ">          <img src={downShape} className="downShap" alt="downShape" />
+
             <Popup  
               handleBuyProduct={handleBuyProduct}
               selectedProduct={selectedProduct}
