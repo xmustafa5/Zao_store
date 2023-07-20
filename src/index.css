@@ -314,3 +314,44 @@ section {
       font-size: 14px;
     }
   }
+
+
+
+
+  
+.fot {
+  height: 100%;
+  width: 100%;
+  background-color: var(--scolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--thcolor);
+}
+hr{
+  border-top: 2px solid var(--blcolor) !important;
+  width: 100px  !important;
+  padding: 4px;
+}
+.fot a{
+  background-color: var(--blcolor);
+  padding: 6px;
+  border-radius: 10px;
+  color: var(--scolor) !important;
+  display: grid;
+  place-items: center;
+  transition:   0.7 ease-in-out;
+
+}
+.fot a:hover{
+  transform: translateY(-10);
+  background-color: var(--fcolor);
+  color: var(--thcolor) !important;
+  transform: translateY(-4px);
+
+}
+.fott{
+  display: flex;
+  justify-content: center;
+gap: 5px;}
