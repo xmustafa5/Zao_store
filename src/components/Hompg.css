@@ -513,11 +513,19 @@ direction: rtl;  }
       display: block;
     }
     .backLogo{
+      width: 200px;
+
       position: absolute;
       top:  0;
       left: 0;
-      background-color: rgb(2, 243, 58) !important;
+      background-color: rgb(234, 2, 255) !important;
   
+    }
+    .bLogo{
+      width: 118px;
+      position: absolute;
+      top:  10px;
+      left: 10px;
     }
     .shape1{
       top: 3%;
