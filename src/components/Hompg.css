@@ -628,11 +628,19 @@ direction: rtl;  }
       
     }
     .backLogo{
+      width: 220px;
+
       position: absolute;
       top:  0;
       left: 0;
-      background-color: rgb(9, 198, 251) !important;
+      background-color: rgb(234, 2, 255) !important;
   
+    }
+    .bLogo{
+      width: 138px;
+      position: absolute;
+      top:  10px;
+      left: 10px;
     }
     .bannerimg {
       z-index: 110;
