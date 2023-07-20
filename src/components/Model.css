@@ -1,3 +1,10 @@
+:root {
+    --fcolor: #1f59b9;
+    --scolor: #182557;
+    --hcolor: #3d3799;
+    --thcolor: #f47324;
+    --blcolor: #2d6acd;
+  }
 .active-modal {
     overflow-y: hidden;
     z-index: 10;
@@ -48,6 +55,13 @@
     bottom: 0;
     left: 40%;
     z-index: -1;
+}
+.upShap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 50%;
 }
 .close-modal {
     position: absolute;
