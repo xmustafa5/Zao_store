@@ -78,11 +78,11 @@ const Hompg = () => {
           <br />
           
           </p>
-          <div className="flex flex-row-reverse  justify-center gap-2 mb-3  ">
+          <div className="flex coooo flex-row  justify-center gap-1 mb-3  ">
             <div>
               <h1 className="conect">تواصل معنا على</h1>
             </div>
-            <div className=" flex flex-row-reverse items-center gap-3 ">
+            <div className=" flex flex-row coo items-center gap-3 ">
               <a
                 href="#!"
                 className="mr-5 text-neutral-800 dark:text-neutral-200"

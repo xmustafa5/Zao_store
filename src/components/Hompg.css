@@ -327,8 +327,10 @@ direction: rtl;  }
     font-size: 22px;
     color: #fff;
     font-weight: 500;
+    direction: rtl;
+    
   }
- 
+
   .sectionsubtitle {
     display: flex;
     justify-content: center;
@@ -369,7 +371,6 @@ direction: rtl;  }
     text-align: center;
     margin: auto;
     margin-bottom: 20px;
-    direction: rtl;
   }
   .homebtngroup {
     display: flex;
@@ -495,7 +496,17 @@ direction: rtl;  }
     }    */
   
   /************3333333333333***************/
-  
+  @media (min-width: 111px ) and (max-width:400px) {
+    .coo{
+      display: block;
+      position: absolute;
+      top: 450px;
+      left: 300px;
+        z-index: 2000;
+      
+      }
+  }
+
   @media (min-width: 375px) {
     .home22 {
       display: block;
