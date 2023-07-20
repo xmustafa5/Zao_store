@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { links } from '../utils/data';
 import { Link } from 'react-router-dom';
 import BurgerMenu from '../assets/menu.png';
-import logo from '../assets/logo.png';
+import logo from '../assets/images/LogoZao.png';
 import CloseMenu from '../assets/close.png'; // Import the close icon
 import "./Navbar.css"
 const Navbar = () => {
@@ -13,8 +13,12 @@ const Navbar = () => {
   };
   return (
     <header className='navbar '>
-      {/* <img  className='logo' width={160} src={logo} alt="" /> */}
-      <h1 className='logo' >zao store</h1>
+      <div className='logoq'>
+         <img  className='logoImage'  src={logo} alt="" /> 
+
+      <h1 className='logo' >zao store</h1  >
+      </div>
+   
     <nav id='mune' className={isActive ? 'active ': ''} >
       {links.map((link, i) => (
         <Link className='' key={i} to={link.link}>

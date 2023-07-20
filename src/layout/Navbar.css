@@ -20,12 +20,19 @@
   background-color: var(--scolor);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.logoq{
+  display: flex;
+  justify-content: center;
+  align-items: center;  margin-left: 120px;
 
+}
 .logo {
-  color: var(--thcolor);
+  color: var(--fcolor);
   font-size: 28px;
-  font-weight: 600;
-  margin-left: 120px;
+  font-weight: 400;
+}
+.logoImage{
+  width: 100px;
 }
 .burger {
   display: none;
