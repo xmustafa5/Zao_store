@@ -115,11 +115,22 @@
    width: 300px;
   }
   .backLogo{
+    width: 180px;
+
     position: absolute;
     top:  0;
     left: 0;
-    background-color: RED !important;
+    background-color: rgb(234, 2, 255) !important;
 
+  }
+  .bLogo{
+    width: 108px !important;
+    position: absolute;
+    top:  10px;
+    left: 10px;
+  }
+  .stitle{
+    padding-top: 20px !important;
   }
   .bLogo{
     width: 160px;
