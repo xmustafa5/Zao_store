@@ -26,7 +26,7 @@
   color: var(--thcolor);
 }
 .pro {
-  background-color: var(--fcolor);
+  background-color: var(--fcolor) !important;
 }
 section {
   /*راح يطبق علئ اي سكشن بالبدي كله*/

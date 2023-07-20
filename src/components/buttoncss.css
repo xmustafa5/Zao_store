@@ -4,6 +4,7 @@
   --hcolor: #3d3799;
   --thcolor: #e1702f;
   --blcolor: #e48b2a;
+  --bllcolor: #2d6acd;
 }
   
 .homebtngroup1 {
@@ -70,7 +71,7 @@
 }
 
 .btntext3 {
-  background: var(--blcolor);
+  background: var(--bllcolor);
   transition: 0.7s ease;
   color: #0a0a33 !important;
   transition: all 250ms;

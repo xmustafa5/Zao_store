@@ -1,10 +1,12 @@
 :root {
   --fcolor: #1f59b9;
-  --scolor: #131e4a;
+  --scolor: #182557;
   --hcolor: #3d3799;
-  --thcolor: #f47324;
-  --blcolor: #2d6acd;
+  --blcolor: #e1702f;
+  --thcolor: #e48b2a;
+  --bllcolor: #2d6acd;
 }
+.activ
 * {
   font-family: 'Tajawal', sans-serif;
 }

@@ -82,5 +82,8 @@
     width: 400px !important;
   }
   .check{
+    background-color: var(--thcolor) !important;
+  }
+  .check:hover{
     background-color: var(--blcolor) !important;
   }
