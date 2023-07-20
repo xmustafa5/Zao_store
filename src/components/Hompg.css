@@ -440,7 +440,7 @@ direction: rtl;  }
   .bannerimg {
     z-index: 110;
     height: 300px !important;
-    width: auto !important;
+    width: 300px !important;
     background-color: red;
   }
   .square {
@@ -594,8 +594,9 @@ direction: rtl;  }
       width: 330px;
     }
     .bannerimg {
-      height: 340px !important;
+      height: 350px !important;
       background-color: #e1702f;
+      width: 350px !important;
     }
   }
   .btntext {
@@ -743,7 +744,7 @@ direction: rtl;  }
     }
     .bannerimg {
       z-index: 110;
-      height: 460px !important;
+      height: 430px !important;
       width: auto !important;
       background-color: aqua;
     }
