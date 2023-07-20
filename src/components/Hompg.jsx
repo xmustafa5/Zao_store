@@ -2,18 +2,20 @@ import React from "react";
 import { useState, useEffect } from "react";
 import bannerline from "../assets/images/banner-line-11.png";
 import bannerimgbg from "../assets/images/banner-img-bg11.png";
+import slideImage from "../assets/images/123.png";
 import bannerimg from "../assets/images/1001.png";
 import banneralimenticon1 from "../assets/images/banner-aliment-icon-12.png";
 import banneralimenticon2 from "../assets/images/banner-aliment-icon-23.png";
 import banneralimenticon3 from "../assets/images/banner-aliment-icon-35.png";
 import banneralimenticon4 from "../assets/images/banner-aliment-icon-4.png";
 import logo from '../assets/images/LogoZao.png';
-import dotsBack from '../assets/images/botsBack1.png';
+import dotsBack from '../assets/images/botsBack.png';
 import shape3 from "../assets/images/shape-31.png";
 import shape1 from "../assets/images/shape-11.png";
 import shape2 from "../assets/images/shape-2.png";
 import shape4 from "../assets/images/shape-4.png";
-import backLogo from "../assets/images/backlogoshape.png";
+import backLogo from "../assets/images/shape-up-orange.png";
+import upLogo from "../assets/images/shape-up-orange.png";
 import cta from "../assets/images/cta-bg-img1.png";
 import { Link } from "react-router-dom";
 
@@ -37,16 +39,18 @@ const Hompg = () => {
           </div> */}
           <div className={"contbackLogo"}>
             <img src={backLogo} alt="art shape" className="backLogo" />
+            <img src={logo} alt="art shape" className="bLogo" />
+
           </div>
           <div className={"contdotsBack"}>
             <img src={dotsBack} alt="art shape" className="dotsBack" />
           </div>
         </div>
         <div className={"homeleft"}>
-          <div className="logoo ">
+          {/* <div className="logoo ">
                     <img  className='logoImagee'  src={logo} alt="" /> 
 
-          </div>
+          </div>   */}
 
           <p className={"stitle"}>اهلا بكم في zao stor</p>
 
@@ -146,17 +150,17 @@ const Hompg = () => {
           </div>
         </div>
 
-        {/* <div className={"homeright"}>
+         <div className={"homeright"}>
           <div className={"imgbox"}>
             {/* <img src={bannerimgbg} alt="colorful background shape" className={backgroundshape} /> */}
-            {/* <div className="rrr">
+             <div className="rrr">
               <div className="re">
                 <img
-                  src={bannerimg}
+                  src={slideImage}
                   alt="banner img"
                   className="bannerimg"
                 />
-              </div> */}
+              </div>
               {/* <div className={"icon"}>
                 <div className={"icon11"}>
                   <img src={banneralimenticon1} alt="" className="icomimg1" />
@@ -165,18 +169,18 @@ const Hompg = () => {
                   <img src={banneralimenticon4} alt="" className="icomimg4" />
                 </div>
               </div> */}
-            {/* </div>
+             </div>
             <div className="sertc">
-              <div className={"sert"}>
+              {/* <div className={"sert"}>
                 <img
                   src={bannerimgbg}
                   alt="colorful background shape"
                   className={"backgroundshape1"}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
-        </div>  */}
+        </div>  
 
       </div>
     </div>
