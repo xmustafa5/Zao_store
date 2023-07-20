@@ -238,11 +238,13 @@
     position: relative;
     z-index: 2;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     flex-direction: column;
     width: 100%;
     margin: 0;
+
+    background-color: red;
   }
   .icon {
     position: relative;
