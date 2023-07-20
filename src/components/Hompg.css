@@ -738,11 +738,19 @@ direction: rtl;  }
       padding: 40px 60px;
     }
     .backLogo{
+      width: 230px;
+
       position: absolute;
       top:  0;
       left: 0;
       background-color: rgb(234, 2, 255) !important;
   
+    }
+    .bLogo{
+      width: 140px;
+      position: absolute;
+      top:  10px;
+      left: 10px;
     }
   }
   
