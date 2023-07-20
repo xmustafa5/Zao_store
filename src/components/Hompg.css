@@ -243,7 +243,6 @@
     flex-direction: column;
     width: 100%;
     margin: 0;
-
   }
   .icon {
     position: relative;
@@ -442,6 +441,7 @@ direction: rtl;  }
     z-index: 110;
     height: 300px !important;
     width: auto !important;
+    background-color: red;
   }
   .square {
     background: #0a0a33;
@@ -595,6 +595,7 @@ direction: rtl;  }
     }
     .bannerimg {
       height: 340px !important;
+      background-color: #e1702f;
     }
   }
   .btntext {
@@ -623,6 +624,7 @@ direction: rtl;  }
       z-index: 110;
       height: 480px !important;
       width: auto !important;
+      background-color: #fff;
     }
     .mainheading {
       font-size: 35px;
@@ -743,6 +745,7 @@ direction: rtl;  }
       z-index: 110;
       height: 460px !important;
       width: auto !important;
+      background-color: aqua;
     }
     .mainheading {
       font-size: 38px;
@@ -917,6 +920,7 @@ direction: rtl;  }
       z-index: 110;
       height: 480px !important;
       width: auto !important;
+      background-color: #3d3799;
     }
   
     .homeleft {
