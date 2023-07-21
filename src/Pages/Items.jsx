@@ -238,14 +238,14 @@ const Items = () => {
                 <th scope="col" class="vvv center  prth  px-6 py-3"> 
                   المنتجات
                 </th>
-                <th scope="col" class="vvv   text-center prth px-6 py-3">
-                  العنوان
-                </th>
                 <th scope="col" class=" vvv text-center prth px-6 py-3">
                   السعر
                 </th>
                 <th scope="col" class="vvv text-center prth px-6 py-3">
                   دسكاونت
+                </th>
+                <th scope="col" class="vvv text-center prth px-6 py-3">
+                  الكود
                 </th>
                 <th scope="col" class="vvv text-center prth px-6 py-3">
                   المسح
@@ -276,9 +276,9 @@ const Items = () => {
         <span className="centertd">لا يوجد عنوان</span>
       )}
     </th>
-    <td class="vvv px-6 py-4 text-center centertd ">{product.color1}</td>
-    <td class="vvv px-6 py-4 text-center centertd">{product.color2}</td>
-    <td class="vvv px-6 py-4 text-center centertd">{product.price}</td>
+    <td class="vvv px-6 py-4 text-center centertd ">{product.price}</td>
+    <td class="vvv px-6 py-4 text-center centertd">{product.priceCode}</td>
+    <td class="vvv px-6 py-4 text-center centertd">{product.code}</td>
     <td class="vvv px-6 py-4 text-center centertd">
       <Link
         onClick={() => handleRemoveProduct(product.id)}

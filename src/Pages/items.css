@@ -521,6 +521,9 @@
     .section-with-no-items {
       top: 18% !important;
     }
+    .wid{
+        width: calc(100% - 18px) !important;
+    }
   }
   
   /* Styles for devices with a width between 768px and 1023px */
@@ -555,6 +558,7 @@
     .section-with-no-items {
       top: 21% !important;
     }
+    
   }
   @media (min-width: 992px) and (max-width: 1095px) {
     .contactsssss {
