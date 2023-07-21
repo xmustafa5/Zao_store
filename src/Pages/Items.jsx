@@ -231,7 +231,7 @@ const Items = () => {
       <div className="proo">
         
         <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg border-r-2">
+        <div class="relative wid overflow-x-auto shadow-md sm:rounded-lg border-r-2">
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
@@ -268,7 +268,7 @@ const Items = () => {
   <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
     <th
       scope="row"
-      class="vvv px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+      class="vvv center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
     >
       {product.title?.length > 0 ? (
         product.title
@@ -276,7 +276,7 @@ const Items = () => {
         <span>no title</span>
       )}
     </th>
-    <td class="vvv px-6 py-4">{product.color1}</td>
+    <td class="vvv px-6 py-4  "><p className="centertd">{product.color1}</p></td>
     <td class="vvv px-6 py-4">{product.color2}</td>
     <td class="vvv px-6 py-4">{product.price}</td>
     <td class="vvv px-6 py-4">
