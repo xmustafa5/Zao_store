@@ -2,6 +2,7 @@ import Home from "./Pages/Home";
 import Dashpord from "./Pages/Dashpord";
 import Layout from "./layout/Index";
 import { Route, Routes } from 'react-router-dom';
+import Items from "./Pages/Items";
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <Routes>
    <Route path="/" element={<Home />} />
    <Route path="/Dashpord" element={<Dashpord/>} />
-   <Route path="/Dashpord" element={<Dashpord/>} />
+   <Route path="/Items" element={<Items/> } />
     </Routes>
     </Layout>
     </>
