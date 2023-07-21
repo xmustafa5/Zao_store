@@ -96,7 +96,7 @@ const Items = () => {
       <div className="contfrom">
         <form onSubmit={handleSubmit} className="form">
           <div className="fleoxx">
-            <h1 className="fex titles pt-8">Add Item</h1>
+            <h1 className="fex titles pt-8">رفع منتج</h1>
           </div>
           <div className="  flex justify-center mt-4 mb-3 ">
             <div>
@@ -196,7 +196,7 @@ const Items = () => {
         </form>
       </div>
       <div className="proo">
-        <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
+        <h1 className="fex mt-10 text-lg mb-6  titles">المنتجات</h1>
         <div class="relative wid overflow-x-auto shadow-md rounded-md ">
           <table class="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-400 dark:text-gray-400">

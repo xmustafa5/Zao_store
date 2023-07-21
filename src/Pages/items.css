@@ -808,8 +808,9 @@
   }
   .titles {
     font-size: 24px;
-    font-weight: 500;
+    font-family: 'Readex Pro', sans-serif;       font-weight: 400;    
     color: var(--thcolor);
+    
   }
   .fex {
     width: 100%;
