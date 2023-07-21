@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { db, storage } from "../firebase";
 import { Link } from "react-router-dom";
 import "./items.css";
+import Dashpord from "./Dashpord"
 const Items = () => {
   const [imageFile1, setImageFile1] = useState(null);
   const [title, setTitle] = useState("");
@@ -92,7 +93,7 @@ const Items = () => {
   };
 
   return (
-    <div className="pro">
+    <div className="prho">
       <div className="contfrom">
         <form onSubmit={handleSubmit} className="form">
           <div className="fleoxx">
@@ -194,6 +195,9 @@ const Items = () => {
             </button>
           </div>
         </form>
+      </div>
+      <div>
+        <Dashpord/>
       </div>
       <div className="proo">
         <h1 className="fex mt-10 text-lg mb-6  titles">المنتجات</h1>

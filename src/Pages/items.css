@@ -6,6 +6,9 @@
   --blcolor: #e48b2a;
   --bllcolor: #2d6acd;
 }
+.prho{
+    background-color: var(--scolor) !important;
+}
   .contactcardnone {
     top: 100%;
     left: 50%;
