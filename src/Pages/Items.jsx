@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 import "./items.css";
 const Items = () => {
   const [imageFile1, setImageFile1] = useState(null);
-  const [imageFile2, setImageFile2] = useState(null);
   const [title, setTitle] = useState("");
-  const [color1, setColor1] = useState("");
-  const [color2, setColor2] = useState("");
   const [price, setPrice] = useState("");
+  const [priceCode, serPriceCode] = useState("");
   const [products, setProducts] = useState([]);
 
   const handleImageChange = (e, setImageFile) => {
@@ -28,12 +26,7 @@ const Items = () => {
       uploadTasks.push(uploadTask1);
     }
 
-    if (imageFile2) {
-      const uploadTask2 = storage
-        .ref(`images/${imageFile2.name}`)
-        .put(imageFile2);
-      uploadTasks.push(uploadTask2);
-    }
+   
 
     Promise.all(uploadTasks)
       .then(() => {
@@ -47,24 +40,16 @@ const Items = () => {
           imageUrlPromises.push(imageUrl1Promise);
         }
 
-        if (imageFile2) {
-          const imageUrl2Promise = storage
-            .ref("images")
-            .child(imageFile2.name)
-            .getDownloadURL();
-          imageUrlPromises.push(imageUrl2Promise);
-        }
+    
 
         return Promise.all(imageUrlPromises);
       })
       .then((imageUrls) => {
         const item = {
           imageUrl1: imageUrls[0] || "",
-          imageUrl2: imageUrls[1] || "",
           title,
-          color1,
-          color2,
           price,
+          priceCode,
         };
 
         return db.collection("products").add(item);
@@ -72,10 +57,9 @@ const Items = () => {
       .then(() => {
         console.log("Item added successfully!");
         setImageFile1(null);
-        setImageFile2(null);
         setTitle("");
-        setColor1("");
-        setColor2("");
+       setPrice("");
+        serPriceCode("");
         setPrice("");
       })
       .catch((error) => {
@@ -120,6 +104,7 @@ const Items = () => {
                 for="first_name"
                 className="block mb-2 text-sm font-medium text-gray-200 dark:text-white"
               >
+                العنوان
               </label>
               <input
                 type="text"
@@ -161,8 +146,8 @@ const Items = () => {
                   <input
                     type="text"
                     id="last_name"
-                    value={color1}
-                    onChange={(e) => setColor1(e.target.value)}
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="black"
                   />
@@ -177,8 +162,8 @@ const Items = () => {
                   <input
                     type="text"
                     id="last_name"
-                    value={color2}
-                    onChange={(e) => setColor2(e.target.value)}
+                    value={priceCode}
+                    onChange={(e) => serPriceCode(e.target.value)}
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="whithe"
                   />
@@ -236,8 +221,8 @@ const Items = () => {
             {products.map((product) => (
               // <div key={product.id}>
               //   <h3>{product.title}</h3>
-              //   {product.color1 && <p>Color 1: {product.color1}</p>}
-              //   {product.color2 && <p>Color 2: {product.color2}</p>}
+              //   {product.price && <p>Color 1: {product.price}</p>}
+              //   {product.priceCode && <p>Color 2: {product.priceCode}</p>}
               //   <p>Price: {product.price}</p>
               //   <button onClick={() => handleRemoveProduct(product.id)}>
               //     Remove Product
