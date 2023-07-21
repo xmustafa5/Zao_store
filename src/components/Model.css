@@ -84,6 +84,10 @@
   .check{
     background-color: var(--thcolor) !important;
   }
+
   .check:hover{
     background-color: var(--blcolor) !important;
+  }
+  .checkprice{
+    background-color: var(--scolor);
   }

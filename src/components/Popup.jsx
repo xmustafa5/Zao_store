@@ -9,7 +9,15 @@ import {
 import { db } from "../firebase";
 import "./Model.css";
 import { Link } from "react-router-dom";
-const Popup = ({setDiscountCode,discountCode,selectedProduct,price,applyDiscountCode,setIsOverlayVisible,setIsPopupOpen}) => {
+const Popup = ({
+  setDiscountCode,
+  discountCode,
+  selectedProduct,
+  price,
+  applyDiscountCode,
+  setIsOverlayVisible,
+  setIsPopupOpen,
+}) => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [number, setNumber] = useState("");
@@ -49,7 +57,7 @@ const Popup = ({setDiscountCode,discountCode,selectedProduct,price,applyDiscount
 
       // Add the productData to the Firestore collection
       const docRef = await addDoc(collection(db, "requests"), productData);
-    console.log("Document written with ID: ", docRef.id);
+      console.log("Document written with ID: ", docRef.id);
 
       // Reset the input fields
       setName("");
@@ -65,8 +73,8 @@ const Popup = ({setDiscountCode,discountCode,selectedProduct,price,applyDiscount
     }
   };
   return (
-     <form onSubmit={handleSubmit} className="form">
-       {/* <h3>{selectedProduct.title}</h3>
+    <form onSubmit={handleSubmit} className="form">
+      {/* <h3>{selectedProduct.title}</h3>
    <img
      src={selectedProduct.imgUrl}
      alt={selectedProduct.title}
@@ -75,78 +83,81 @@ const Popup = ({setDiscountCode,discountCode,selectedProduct,price,applyDiscount
    <p>Price: ${price}</p>
    Display the price */}
 
-       <div className="mb-5  inp  ">
-         <label
-           for="default-input"
-           class="block mb-2 containetinput  font-medium text-gray-900 dark:text-white"
-         >
-           الاسم
-         </label>
-         <input
-           value={name}
-           onChange={(e) => setName(e.target.value)}
-           placeholder="name"
-           type="text"
-           id="default-input"
-           class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-         />
-       </div>
-       <div class="mb-5">
-         <label
-           for="default-input"
-           class="block mb-2  containetinput text-gray-900 dark:text-white  rtl:"
-         >
-           العنوان
-         </label>
-         <input
-           value={location}
-           onChange={(e) => setLocation(e.target.value)}
-           type="text"
-           id="default-input"
-           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-         />
-       </div>
-       <div class="mb-5">
-         <label
-           for="default-input"
-           class="block mb-2  containetinput text-gray-900 dark:text-white"
-         >
-           رقم الهاتف
-         </label>
-         <input
-           value={number}
-           onChange={(e) => setNumber(e.target.value)}
-           type="text"
-           id="default-input"
-           class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-         />
-       </div>
-       <div class="mb-5">
-         <label
-           for="default-input"
-           class="block mb-2  containetinput text-gray-900 dark:text-white"
-         >
-           كود الخصم
-           <p>Price: ${price}</p>
-         </label>
-         <div class="relative discontinput">
-           <input
-             value={discountCode}
-             onChange={handleDiscountCodeChange}
-             type="search"
-             id="search"
-             class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-           />
-           <button
-             onClick={applyDiscountCode}
-
-             class="text-white check absolute left-2.5 bottom-2.5 focus:ring-2  focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2  dark:focus:ring-blue-800"
-           >
-             تاكيد
-           </button>
-         </div>
-       </div>
-       {/* <input
+      <div className="mb-5  inp  ">
+        <label
+          for="default-input"
+          class="block mb-2 containetinput  font-medium text-gray-900 dark:text-white"
+        >
+          الاسم
+        </label>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="name"
+          type="text"
+          id="default-input"
+          class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="default-input"
+          class="block mb-2  containetinput text-gray-900 dark:text-white  rtl:"
+        >
+          العنوان
+        </label>
+        <input
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+          type="text"
+          id="default-input"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="default-input"
+          class="block mb-2  containetinput text-gray-900 dark:text-white"
+        >
+          رقم الهاتف
+        </label>
+        <input
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+          type="text"
+          id="default-input"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="default-input"
+          class="block mb-2  containetinput text-gray-900 dark:text-white"
+        >
+          كود الخصم
+          <p className="direction rtl">الف {price}</p>
+        </label>
+        <div class="relative discontinput">
+          <input
+            value={discountCode}
+            onChange={handleDiscountCodeChange}
+            type="text"
+            id="search"
+            class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+          <button
+            onClick={applyDiscountCode}
+            type="button"
+            class="text-white check absolute left-2.5 bottom-2 focus:ring-2 z-30 focus:ring-blue-300 font-medium rounded-lg text-md px-4 py-2  dark:focus:ring-blue-800"
+          >
+            تاكيد
+          </button>
+          <div class="text-white checkprice absolute left-16 bottom-2.5  z-10  font-medium rounded-md text-sm px-4 py-1.5  dark:focus:ring-blue-800">
+            <p className="">{price} الف</p>
+          </div>
+        </div>
+      </div>
+      {/* <input
      type="text"
    
      placeholder="Name"
@@ -170,21 +181,20 @@ const Popup = ({setDiscountCode,discountCode,selectedProduct,price,applyDiscount
      placeholder="Discount Code"
      required
    /> */}
-       {/* <button type="button" >
+      {/* <button type="button" >
      Apply Code
    </button> */}
-       <div className={"homebtngroup"}>
-         <button
-   type="submit"
- 
-   className={"btnbtnprimary"}
-   data-aos="zoom-in"
-   data-aos-duration="1400"
- >
-   <p className={"btntext3"}> شراء </p>
-   <span className={"square"}></span>
- </button>
-         {/* <Link href="/aboutus">
+      <div className={"homebtngroup"}>
+        <button
+          type="submit"
+          className={"btnbtnprimary"}
+          data-aos="zoom-in"
+          data-aos-duration="1400"
+        >
+          <p className={"btntext3"}> شراء </p>
+          <span className={"square"}></span>
+        </button>
+        {/* <Link href="/aboutus">
                <button onClick={"handleButton1Click"}
                  className={"btnbtnsecondary"}
                  data-aos="zoom-in"
@@ -194,53 +204,53 @@ const Popup = ({setDiscountCode,discountCode,selectedProduct,price,applyDiscount
                  <span className={"square"}></span>
                </button>
              </Link> */}
-       </div>
-       {/* <button type="submit" className='btntext3'>طلب الان</button> */}
-     </form>
-// {/* <div className="popup">
-// <form onSubmit={handleSubmit}>
-//    <h3>{selectedProduct.title}</h3>
-//   <img
-//     src={selectedProduct.imgUrl}
-//     alt={selectedProduct.title}
-//     width={110}
-//   /> 
-//   <p>Price: ${price}</p>
-//   {/* Display the price */}
-//   <input
-//     type="text"
-//     value={name}
-//     onChange={(e) => setName(e.target.value)}
-//     placeholder="Name"
-//     required
-//   />
-//   <input
-//     type="text"
-//     value={location}
-//     onChange={(e) => setLocation(e.target.value)}
-//     placeholder="Location"
-//     required
-//   />
-//   <input
-//     type="tel"
-//     value={number}
-//     onChange={(e) => setNumber(e.target.value)}
-//     placeholder="Number"
-//     required
-//   />
-//   <input
-//     type="text"
-//     value={discountCode}
-//     onChange={handleDiscountCodeChange}
-//     placeholder="Discount Code"
-//     required
-//   />
-//   <button type="button" onClick={applyDiscountCode}>
-//     Apply Code
-//   </button>
-//   <button type="submit">Buy Now</button>
-// </form>
-// </div> */}
+      </div>
+      {/* <button type="submit" className='btntext3'>طلب الان</button> */}
+    </form>
+    // {/* <div className="popup">
+    // <form onSubmit={handleSubmit}>
+    //    <h3>{selectedProduct.title}</h3>
+    //   <img
+    //     src={selectedProduct.imgUrl}
+    //     alt={selectedProduct.title}
+    //     width={110}
+    //   />
+    //   <p>Price: ${price}</p>
+    //   {/* Display the price */}
+    //   <input
+    //     type="text"
+    //     value={name}
+    //     onChange={(e) => setName(e.target.value)}
+    //     placeholder="Name"
+    //     required
+    //   />
+    //   <input
+    //     type="text"
+    //     value={location}
+    //     onChange={(e) => setLocation(e.target.value)}
+    //     placeholder="Location"
+    //     required
+    //   />
+    //   <input
+    //     type="tel"
+    //     value={number}
+    //     onChange={(e) => setNumber(e.target.value)}
+    //     placeholder="Number"
+    //     required
+    //   />
+    //   <input
+    //     type="text"
+    //     value={discountCode}
+    //     onChange={handleDiscountCodeChange}
+    //     placeholder="Discount Code"
+    //     required
+    //   />
+    //   <button type="button" onClick={applyDiscountCode}>
+    //     Apply Code
+    //   </button>
+    //   <button type="submit">Buy Now</button>
+    // </form>
+    // </div> */}
   );
 };
 
