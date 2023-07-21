@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db, storage } from "../firebase";
 import { Link } from "react-router-dom";
-
+import "./items.css"
 const Items = () => {
   const [imageFile1, setImageFile1] = useState(null);
   const [imageFile2, setImageFile2] = useState(null);
