@@ -12,7 +12,6 @@ import "./buttoncss.css"
 const Shop = () => {
   const [products, setProducts] = useState([]);
 
-  const [price, setPrice] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   useEffect(() => {
@@ -58,12 +57,12 @@ const Shop = () => {
         handleBuyProduct={() => handleBuyProduct(product)} // Pass the handleBuyProduct function with the product
         products={products}
         selectedProduct={selectedProduct}
-        setPrice={setPrice}
+        
         isPopupOpen={isPopupOpen}
         isOverlayVisible={isOverlayVisible}
         setIsOverlayVisible={setIsOverlayVisible}
         setIsPopupOpen={setIsPopupOpen}
-        price={price}
+      
           />        
 
       ))}

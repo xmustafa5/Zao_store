@@ -22,7 +22,7 @@ const Cards = ({
 }) => {
   const [discountCode, setDiscountCode] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
-
+  const [price, setPrice] = useState(null);
   const handleBuyProduct = (product) => {
     setSelectedProduct(product);
     setPrice(product.price); // Set the price to the priceCode of the selected product
