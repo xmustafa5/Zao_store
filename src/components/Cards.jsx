@@ -3,25 +3,37 @@ import downShape from "../assets/images/shape-down-orange.png";
 import upShape from "../assets/images/shape-up-orange.png";
 import Popup from "./Popup";
 import "./cards.css";
-const Cards = ({ title, prices, imgUrl, products }) => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [price, setPrice] = useState(null);
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+const Cards = ({
 
-  const handleBuyProduct = (product) => {
-    setSelectedProduct(product);
-    setPrice(product.price); // Set the price to the priceCode of the selected product
-    setIsPopupOpen(true);
-    setIsPopupOpen(!isPopupOpen);
-    setIsOverlayVisible(!isOverlayVisible);
+  handleDiscountCodeChange,
+  setDiscountCode,
+  handleBuyProduct,
+  isOverlayVisible,
+  isPopupOpen,
+  setIsOverlayVisible,
+  setIsPopupOpen,
+  imgUrl,
+  title,
+  price,
+  setPrice,
+  products,
+  selectedProduct,
+  discountCode,
+}) => {
+  const applyDiscountCode = () => {
+    try {
+      const product = products.find((p) => p.id === selectedProduct.id);
+      if (product && product.priceCode && discountCode === product.code) {
+        setPrice(product.priceCode);
+        console.log("Discount applied successfully!");
+      } else {
+        setPrice(selectedProduct.price);
+        console.log("Invalid product or discount code not available");
+      }
+    } catch (error) {
+      console.error("Error applying discount code: ", error);
+    }
   };
-
-  if (isPopupOpen) {
-    document.body.classList.add("active-modal");
-  } else {
-    document.body.classList.remove("active-modal");
-  }
   return (
     <>
       <ul className="content">
@@ -38,7 +50,7 @@ const Cards = ({ title, prices, imgUrl, products }) => {
                 <span className="titlecard">{title}</span>
               </strong>
               <div className="prices">
-                <p className="iopp">{prices}$</p>
+                <p className="iopp">{price}$</p>
               </div>
             </div>
             <div className="fexbtn">
@@ -68,13 +80,14 @@ const Cards = ({ title, prices, imgUrl, products }) => {
             <img src={downShape} className="downShap" alt="downShape" />
             <img src={upShape} className="upShap" alt="upShape" />
             <Popup
-              handleBuyProduct={handleBuyProduct}
-              selectedProduct={selectedProduct}
-              products={products}
-              setIsPopupOpen={setIsPopupOpen}
+              applyDiscountCode={applyDiscountCode}
               setIsOverlayVisible={setIsOverlayVisible}
-              setPrice={setPrice}
-              price={prices}
+              setIsPopupOpen={setIsPopupOpen}
+              price={price}
+              discountCode={discountCode}
+              setDiscountCode={setDiscountCode}
+              selectedProduct={selectedProduct}
+              handleDiscountCodeChange={handleDiscountCodeChange}
             />
           </div>
         </div>
