@@ -9,11 +9,15 @@ import {
 import { db } from "../firebase";
 import "./Model.css";
 import { Link } from "react-router-dom";
-const Popup = ({selectedProduct,setDiscountCode,discountCode,handleDiscountCodeChange,price,applyDiscountCode,setIsOverlayVisible,setIsPopupOpen}) => {
+const Popup = ({setDiscountCode,discountCode,selectedProduct,price,applyDiscountCode,setIsOverlayVisible,setIsPopupOpen}) => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [number, setNumber] = useState("");
-  
+
+  const handleDiscountCodeChange = (e) => {
+    setDiscountCode(e.target.value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 

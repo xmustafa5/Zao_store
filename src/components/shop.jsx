@@ -11,8 +11,7 @@ import Cards from "./Cards";
 import "./buttoncss.css"
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [discountCode, setDiscountCode] = useState("");
- 
+
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [price, setPrice] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -49,9 +48,7 @@ const Shop = () => {
   } else {
     document.body.classList.remove("active-modal");
   }
-  const handleDiscountCodeChange = (e) => {
-    setDiscountCode(e.target.value);
-  };
+
 
 
  
@@ -71,15 +68,12 @@ const Shop = () => {
         prices={product.prices} // Pass the correct prices prop
         handleBuyProduct={() => handleBuyProduct(product)} // Pass the handleBuyProduct function with the product
         products={products}
-        discountCode={discountCode}
         selectedProduct={selectedProduct}
         setPrice={setPrice}
         isPopupOpen={isPopupOpen}
         isOverlayVisible={isOverlayVisible}
         setIsOverlayVisible={setIsOverlayVisible}
         setIsPopupOpen={setIsPopupOpen}
-        setDiscountCode={setDiscountCode}
-        handleDiscountCodeChange={handleDiscountCodeChange}
         price={price}
           />        
 

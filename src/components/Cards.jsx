@@ -6,7 +6,7 @@ import "./cards.css";
 const Cards = ({
 
   handleDiscountCodeChange,
-  setDiscountCode,
+  
   handleBuyProduct,
   isOverlayVisible,
   isPopupOpen,
@@ -18,8 +18,10 @@ const Cards = ({
   setPrice,
   products,
   selectedProduct,
-  discountCode,
+  
 }) => {
+  const [discountCode, setDiscountCode] = useState("");
+
   const applyDiscountCode = () => {
     try {
       const product = products.find((p) => p.id === selectedProduct.id);
@@ -87,8 +89,7 @@ const Cards = ({
               discountCode={discountCode}
               setDiscountCode={setDiscountCode}
               selectedProduct={selectedProduct}
-              handleDiscountCodeChange={handleDiscountCodeChange}
-            />
+              />
           </div>
         </div>
       )}
