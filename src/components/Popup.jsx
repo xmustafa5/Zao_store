@@ -48,7 +48,7 @@ const Popup = ({
         name,
         location,
         number,
-        price,
+        price: price || 0, // Set a default value of 0 if price is null
       };
 
       // Apply discount code if it matches the selected product
@@ -71,7 +71,7 @@ const Popup = ({
 
       // Add the productData to the Firestore collection
       const docRef = await addDoc(collection(db, "requests"), productData);
-      console.log("Document written with ID: ", docRef.id);
+    console.log("Document written with ID: ", docRef.id);
 
       // Reset the input fields
       setName("");
@@ -195,18 +195,16 @@ const Popup = ({
     Apply Code
   </button> */}
       <div className={"homebtngroup"}>
-        <Link to="/#shop">
-          <button
-            type="submit"
-            onClick={"handleButtonClick"}
-            className={"btnbtnprimary"}
-            data-aos="zoom-in"
-            data-aos-duration="1400"
-          >
-            <p className={"btntext3"}> شراء </p>
-            <span className={"square"}></span>
-          </button>
-        </Link>
+        <button
+  type="submit"
+ 
+  className={"btnbtnprimary"}
+  data-aos="zoom-in"
+  data-aos-duration="1400"
+>
+  <p className={"btntext3"}> شراء </p>
+  <span className={"square"}></span>
+</button>
         {/* <Link href="/aboutus">
               <button onClick={"handleButton1Click"}
                 className={"btnbtnsecondary"}
