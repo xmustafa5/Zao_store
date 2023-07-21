@@ -12,7 +12,6 @@ import "./buttoncss.css"
 const Shop = () => {
   const [products, setProducts] = useState([]);
 
-  const [selectedProduct, setSelectedProduct] = useState(null);
   const [price, setPrice] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
@@ -35,19 +34,9 @@ const Shop = () => {
   }, []);
 
 
-  const handleBuyProduct = (product) => {
-    setSelectedProduct(product);
-    setPrice(product.price); // Set the price to the priceCode of the selected product
-    setIsPopupOpen(true);
-    setIsPopupOpen(!isPopupOpen);
-    setIsOverlayVisible(!isOverlayVisible);
-  };
 
-  if (isPopupOpen) {
-    document.body.classList.add("active-modal");
-  } else {
-    document.body.classList.remove("active-modal");
-  }
+
+ 
 
 
 
