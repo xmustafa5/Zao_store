@@ -21,6 +21,7 @@ const Popup = ({
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [number, setNumber] = useState("");
+  const [discountEnabled, setDiscountEnabled] = useState(false);
 
   const handleDiscountCodeChange = (e) => {
     setDiscountCode(e.target.value);
@@ -129,33 +130,51 @@ const Popup = ({
           class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         />
       </div>
-      <div class="mb-5">
+      <div className="mb-5">
         <label
-          for="default-input"
-          class="block mb-2  containetinput text-gray-900 dark:text-white"
+          for="apply-discount-checkbox"
+          className="block mb-2 containetinput text-gray-900 dark:text-white"
         >
-          كود الخصم
+          Apply Discount
         </label>
-        <div class="relative discontinput">
-          <input
-            value={discountCode}
-            onChange={handleDiscountCodeChange}
-            type="text"
-            id="search"
-            class="block  w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-00 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-700 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          />
-          <button
-            onClick={applyDiscountCode}
-            type="button"
-            class="text-white check absolute left-2.5 bottom-2 focus:ring-2 z-30 focus:ring-blue-300 font-medium rounded-lg text-md px-4 py-2  dark:focus:ring-orange-400"
+        <input
+          type="checkbox"
+          id="apply-discount-checkbox"
+          checked={discountEnabled}
+          onChange={(e) => setDiscountEnabled(e.target.checked)}
+          className="mr-2"
+        />
+      </div>
+
+      {discountEnabled && (
+        <div className="mb-5">
+          <label
+            for="discount-input"
+            className="block mb-2 containetinput text-gray-900 dark:text-white"
           >
-            تاكيد
-          </button>
-          <div class="text-white checkprice absolute left-16 bottom-2.5  z-10  font-medium rounded-md text-sm px-4 py-1.5  ">
-            <p className="">{price} الف</p>
+            Discount Code
+          </label>
+          <div className="relative discontinput">
+            <input
+              value={discountCode}
+              onChange={handleDiscountCodeChange}
+              type="text"
+              id="discount-input"
+              className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-700 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+            <button
+              onClick={applyDiscountCode}
+              type="button"
+              className="text-white check absolute left-2.5 bottom-2 focus:ring-2 z-30 focus:ring-blue-300 font-medium rounded-lg text-md px-4 py-2 dark:focus:ring-orange-400"
+            >
+              تاكيد
+            </button>
+            <div className="text-white checkprice absolute left-16 bottom-2.5  z-10  font-medium rounded-md text-sm px-4 py-1.5">
+              <p className="">{price} الف</p>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       {/* <input
      type="text"
    
