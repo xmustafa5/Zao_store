@@ -1,10 +1,11 @@
 :root {
-    --fcolor: #17212b;
-    --scolor: #242f3d;
-    --hcolor: #1d2b3c;
-    --thcolor: #12d0c5;
-    --blcolor: #30a3e6;
-  }
+    --fcolor: #1f59b9;
+  --scolor: #182557;
+  --hcolor: #3d3799;
+  --thcolor: #e1702f;
+  --blcolor: #e48b2a;
+  --bllcolor: #2d6acd;
+}
   .contactcardnone {
     top: 100%;
     left: 50%;
@@ -19,7 +20,7 @@
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--hcolor);
+    background: red;
     width: calc(100% - 68px);
     padding: 20px 20px;
     display: grid;

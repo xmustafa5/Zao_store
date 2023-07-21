@@ -4,6 +4,7 @@
   --hcolor: #3d3799;
   --thcolor: #e1702f;
   --blcolor: #e48b2a;
+  --bllcolor: #2d6acd;
 }
   
   .drop-anim {
@@ -329,7 +330,7 @@
     align-items: center;
     margin-top: 10px;
     margin-bottom: 20px;
-    color: var(--fcolor);
+    color: var(--thcolor) !important;
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
