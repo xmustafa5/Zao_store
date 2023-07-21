@@ -231,7 +231,7 @@ const Items = () => {
       <div className="proo">
         
         <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
-        <div class="relative wid overflow-x-auto shadow-md sm:rounded-lg ">
+        <div class="relative wid overflow-x-auto shadow-md rounded-md ">
           <table class="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-400 dark:text-gray-400">
               <tr>
