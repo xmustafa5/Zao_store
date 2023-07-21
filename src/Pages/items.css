@@ -746,7 +746,12 @@
   .vvv{
       color: black;
   }
+  .flexinputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;  gap: 10px;
   
+  }
   @media (min-width: 111px) and (max-width: 370px) {
       .form{
           font-size: 16px;
@@ -785,7 +790,13 @@
   
   }
   
-  
+  .inputsss{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+  }
   .titles {
     font-size: 24px;
     font-weight: 500;
@@ -796,4 +807,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .flexxx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .proo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 10px;
+  
+  }
+
+  .wid{
+    width: calc(100% -20px);
   }
