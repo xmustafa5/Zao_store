@@ -98,6 +98,11 @@ const Popup = ({
   Display the price */}
 
       <div className="mb-5  inp  ">
+      <img
+    src={selectedProduct.imgUrl}
+    alt={selectedProduct.title}
+    width={110}
+  />
         <label
           for="default-input"
           class="block mb-2 containetinput  font-medium text-gray-900 dark:text-white"
@@ -148,7 +153,7 @@ const Popup = ({
           for="default-input"
           class="block mb-2  containetinput text-gray-900 dark:text-white"
         >
-          كود الخصم
+          كود الخصم <p>Price: ${price}</p>
         </label>
         <div class="relative discontinput">
           <input

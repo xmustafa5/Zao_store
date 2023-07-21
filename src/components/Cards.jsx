@@ -74,7 +74,7 @@ const Cards = ({ title, prices, imgUrl, products }) => {
               setIsPopupOpen={setIsPopupOpen}
               setIsOverlayVisible={setIsOverlayVisible}
               setPrice={setPrice}
-              price={price}
+              price={prices}
             />
           </div>
         </div>
