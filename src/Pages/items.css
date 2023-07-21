@@ -828,16 +828,12 @@
   .wid{
     width: calc(100% - 218px);
 }
+
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .centertd{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    place-content: center;
-    font-size: 14px;
-    font-weight: 400;
+    color: #12d0c5;
 }

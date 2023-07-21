@@ -231,24 +231,24 @@ const Items = () => {
       <div className="proo">
         
         <h1 className="fex mt-10 text-lg mb-6 titles">items</h1>
-        <div class="relative wid overflow-x-auto shadow-md sm:rounded-lg border-r-2">
-          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <div class="relative wid overflow-x-auto shadow-md sm:rounded-lg ">
+          <table class="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-400 dark:text-gray-400">
               <tr>
                 <th scope="col" class="vvv center  prth  px-6 py-3"> 
                   المنتجات
                 </th>
-                <th scope="col" class="vvv  prth px-6 py-3">
-                  SPH
+                <th scope="col" class="vvv   text-center prth px-6 py-3">
+                  العنوان
                 </th>
-                <th scope="col" class=" vvv prth px-6 py-3">
-                  CYL
+                <th scope="col" class=" vvv text-center prth px-6 py-3">
+                  السعر
                 </th>
-                <th scope="col" class="vvv  prth px-6 py-3">
-                  AIX
+                <th scope="col" class="vvv text-center prth px-6 py-3">
+                  دسكاونت
                 </th>
-                <th scope="col" class="vvv  prth px-6 py-3">
-                  lens type
+                <th scope="col" class="vvv text-center prth px-6 py-3">
+                  المسح
                 </th>
               </tr>
             </thead>
@@ -268,23 +268,23 @@ const Items = () => {
   <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
     <th
       scope="row"
-      class="vvv center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+      class="vvv center px-6 py-4 font-medium centertd whitespace-nowrap dark:text-white"
     >
       {product.title?.length > 0 ? (
         product.title
       ) : (
-        <span>no title</span>
+        <span className="centertd">لا يوجد عنوان</span>
       )}
     </th>
-    <td class="vvv px-6 py-4  "><p className="centertd">{product.color1}</p></td>
-    <td class="vvv px-6 py-4">{product.color2}</td>
-    <td class="vvv px-6 py-4">{product.price}</td>
-    <td class="vvv px-6 py-4">
+    <td class="vvv px-6 py-4 text-center centertd ">{product.color1}</td>
+    <td class="vvv px-6 py-4 text-center centertd">{product.color2}</td>
+    <td class="vvv px-6 py-4 text-center centertd">{product.price}</td>
+    <td class="vvv px-6 py-4 text-center centertd">
       <Link
         onClick={() => handleRemoveProduct(product.id)}
-        class="font-medium text-blue-300 dark:text-blue-200 hover:underline"
+        class="font-medium center text-blue-300 dark:text-blue-200 hover:underline"
       >
-        remove
+        مسح
       </Link>
     </td>
   </tr>
