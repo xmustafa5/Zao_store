@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { db } from "../firebase"; // Check the path to your firebase.js file
-import { storage } from "../firebase"; // Check the path to your firebase.js file
+import { db, storage } from "../firebase";
 import { Link } from "react-router-dom";
 
 const Items = () => {
@@ -266,30 +265,30 @@ const Items = () => {
               // </div>
 
               <tbody key={product.id}>
-              <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-              <th
-                  scope="row"
-                  class="vvv px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                    {product.title.length > 0 ? (
-                      product.title
-                    ) : (
-                      <th>no title</th>
-                    )}
-                  </th>
-                  <td class="vvv px-6 py-4">{product.color1}</td>
-                  <td class="vvv px-6 py-4">{product.color2}</td>
-                  <td class="vvv px-6 py-4">{product.price}</td>
-                  <td class="vvv px-6 py-4">
-                    <Link
-                      onClick={() => handleRemoveProduct(product.id)}
-                      class="font-medium text-blue-300 dark:text-blue-200 hover:underline"
-                    >
-                      remove
-                    </Link>
-                  </td>
-                </tr>
-              </tbody>
+  <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+    <th
+      scope="row"
+      class="vvv px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+    >
+      {product.title?.length > 0 ? (
+        product.title
+      ) : (
+        <span>no title</span>
+      )}
+    </th>
+    <td class="vvv px-6 py-4">{product.color1}</td>
+    <td class="vvv px-6 py-4">{product.color2}</td>
+    <td class="vvv px-6 py-4">{product.price}</td>
+    <td class="vvv px-6 py-4">
+      <Link
+        onClick={() => handleRemoveProduct(product.id)}
+        class="font-medium text-blue-300 dark:text-blue-200 hover:underline"
+      >
+        remove
+      </Link>
+    </td>
+  </tr>
+</tbody>
             ))}
           </table>
         </div>

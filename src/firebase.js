@@ -1,7 +1,8 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
-import { getAuth } from "firebase/auth";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import 'firebase/compat/storage';
+import 'firebase/compat/auth';
+
 const firebaseConfig = {
     apiKey: "AIzaSyD_xZdgsvQEIb8Bhlve0niJZOGbgISt-dg",
     authDomain: "zao-store-e7fe8.firebaseapp.com",
@@ -13,9 +14,18 @@ const firebaseConfig = {
 
 
 
-  const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const storage = getStorage(app);
-const auth = getAuth(app);
+ 
 
-export { db, storage, auth };
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Initialize Firestore
+export const db = firebase.firestore();
+
+// Initialize Storage
+export const storage = firebase.storage();
+export const auth = firebase.auth();
+
+// You can also export other Firebase services if needed
+
+export default firebase;

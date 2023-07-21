@@ -2,7 +2,7 @@ import Home from "./Pages/Home";
 import Dashpord from "./Pages/Dashpord";
 import Layout from "./layout/Index";
 import { Route, Routes } from 'react-router-dom';
-import Items from "./Pages/Items";
+import Items from "./components/Items";
 
 
 function App() {
