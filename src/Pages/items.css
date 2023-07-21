@@ -754,6 +754,7 @@
     display: flex;
     justify-content: center;
     align-items: center;  gap: 10px;
+    flex-direction: column;
   
   }
   @media (min-width: 111px) and (max-width: 370px) {
@@ -803,7 +804,6 @@
     display: flex !important;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     gap: 4px;
   }
   .titles {
