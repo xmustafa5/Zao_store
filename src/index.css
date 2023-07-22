@@ -34,6 +34,7 @@
 }
 .pro {
   background-color: var(--hcolor) !important;
+  z-index: 30 !important;
 }
 section {
   /*راح يطبق علئ اي سكشن بالبدي كله*/

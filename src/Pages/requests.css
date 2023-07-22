@@ -17,6 +17,13 @@
 .logoe{
   width: 100px;
 }
+.titless h1{
+  font-size: 24px;
+  color: var(--fcolor);
+  direction: rtl;
+  z-index: 100;
+  font-family: 'Readex Pro', sans-serif;       font-weight: 600;    
+}
 .content {
     display: flex;
     justify-content: center;
@@ -126,7 +133,16 @@
     background-color: var(--hcolor) !important;
 
   }
-
+  .noitem {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .noitem h1 {
+    color: wheat;
+    font-size: 20px;
+  }
   
   @media (min-width: 111px ) and (max-width: 370px) {
     section{ 

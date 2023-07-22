@@ -42,10 +42,10 @@ const Requests = () => {
     <div className='cooe'>
       <div className='ddde '>
        <img src={logo} alt="logo" className='logoe z-10'  />
-       <img src={backlogo} alt="backlogo" className='absolute top-0 z-0 rotate-180' />
+       <img src={backlogo} alt="backlogo" className='absolute -top-1 z-0 rotate-180' />
       </div>
     <section className="prfo">
-    <div className="fex titles">
+    <div className="fex titless z-40">
       <h1 className='mb-3 mt-3'>الطلبات</h1>
     </div>
     {requests.length > 0 ? (
@@ -108,7 +108,7 @@ const Requests = () => {
         ))}
       </ul>
     ) : (
-      <div className="noitem">
+      <div className="noitem ">
         <h1>No requests available.</h1>
       </div>
     )}
