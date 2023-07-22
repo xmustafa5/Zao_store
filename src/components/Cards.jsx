@@ -14,6 +14,7 @@ const Cards = ({
   imgUrl,
   title,
   price,
+  prices,
   setPrice,
   products,
   selectedProduct,
@@ -89,6 +90,7 @@ const Cards = ({
               applyDiscountCode={applyDiscountCode}
               setIsOverlayVisible={setIsOverlayVisible}
               setIsPopupOpen={setIsPopupOpen}
+              prices={prices}
               price={price}
               discountCode={discountCode}
               setDiscountCode={setDiscountCode}

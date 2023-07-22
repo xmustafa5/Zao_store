@@ -14,6 +14,7 @@ const Popup = ({
   discountCode,
   selectedProduct,
   price,
+  prices,
   applyDiscountCode,
   setIsOverlayVisible,
   setIsPopupOpen,
@@ -172,7 +173,7 @@ const Popup = ({
               تاكيد
             </button>
             <div className="text-white checkprice absolute left-16 bottom-2.5  z-10  font-medium rounded-md text-sm px-4 py-1.5">
-              <p className="">{price} الف</p>
+              <p className="">{prices} الف</p>
             </div>
 
           </div>

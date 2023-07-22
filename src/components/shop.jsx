@@ -13,7 +13,7 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
 
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [price, setPrice] = useState(null);
+  const [prices, setPrice] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   useEffect(() => {
@@ -25,12 +25,12 @@ const Shop = () => {
           id: doc.id,
           ...doc.data(),
         }));
-        setProducts(productsData);
+        setProducts(productsData);    console.log(productsData.price);
+
       } catch (error) {
         console.error("Error fetching products: ", error);
       }
     };
-
     fetchProducts();
   }, []);
 
@@ -61,7 +61,7 @@ const Shop = () => {
         key={product.id}
         imgUrl={product.imageUrl1} // Pass the correct imgUrl prop
         title={product.title} // Pass the correct title prop
-        prices={product.prices} // Pass the correct prices prop
+        price={product.price} // Pass the correct prices prop
         handleBuyProduct={() => handleBuyProduct(product)} // Pass the handleBuyProduct function with the product
         products={products}
         selectedProduct={selectedProduct}
@@ -70,7 +70,7 @@ const Shop = () => {
         isOverlayVisible={isOverlayVisible}
         setIsOverlayVisible={setIsOverlayVisible}
         setIsPopupOpen={setIsPopupOpen}
-        price={price}
+        prices={prices}
           />        
 
       ))}
