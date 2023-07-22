@@ -23,27 +23,67 @@ const Requests = () => {
     }, []);
 
   return (
-    <div>
-      <h1>Requests Page</h1>
-      <div>
-      <ul>
+    <section className="pro">
+    <div className="fex titles">
+      <h1>Requests</h1>
+    </div>
+    {requests.length > 0 ? (
+      <ul className="content d">
         {requests.map((request) => (
-          <li key={request.id}>
-            <p>Name: {request.name}</p>
-            <p>Location: {request.location}</p>
-            <p>Number: {request.number}</p>
-            {/* Render the product data if available */}
-            {request.productData && (
-              <div>
-                <p>Product Title: {request.productData.title}</p>
-                <img src={request.productData.imgUrl} alt={request.productData.title} />
-                <p>Product Price: {request.productData.price}</p>
+          <li className="borditem " key={request.id}>
+            <div className="pb-2">
+              <div className="fex inputs">
+                <div className="flex w-full justify-center text-lg mb-2">
+                  <p> {request.name}</p>
+                  <p> - {request.location}</p>
+                  <p>- {request.number  }</p>
+                </div>
+             
+                <h1 className="text-xl mt-2">الطلب:</h1>
               </div>
-            )}
+              <div></div>
+              {request.productData && (
+
+                      <div className="projcardo">
+                                        <img src={request.productData.imgUrl} alt={request.productData.title} />
+
+                        <div className="sssso">
+                          <div className="projimg">
+                            <img src={request.productData.imgUrl} alt="Selected Option" />
+                          </div>
+                          {/* <img src={imageSource} alt="Selected Option"  /> */}
+                        </div>
+                        <div className="projinfo">
+                          <strong className="projtitle">
+                            <span className="titlecard">{request.productData.title} </span>
+                            {/* <div className="centerbrn">
+                              {item.color && (
+                                <button className={`radio-buttono`}>
+                                  {item.color}
+                                </button>
+                              )}
+                            </div> */}
+                          </strong>
+                          <div className="prices">
+                            <p className="iopp">{request.productData.price}$</p>
+                          </div>
+                         
+                        </div>
+                      </div>
+                              )}
+
+              ) 
+            </div>
+          
           </li>
         ))}
       </ul>
-    </div>    </div>
+    ) : (
+      <div className="noitem">
+        <h1>No requests available.</h1>
+      </div>
+    )}
+  </section>
   );
 };
 export default Requests;

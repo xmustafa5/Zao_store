@@ -34,7 +34,7 @@ const Popup = ({
       const productData = {
         id: selectedProduct.id,
         title: selectedProduct.title,
-        imgUrl: selectedProduct.imgUrl || 0,
+        imgUrl: selectedProduct.imageUrl1,
         price: price || 0, // Set a default value of 0 if price is null
       };
       const requestData = {
