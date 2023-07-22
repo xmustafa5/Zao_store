@@ -1,31 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../firebase'
-const Requests = () => {
-    const [requests, setRequests] = useState([]);
+import { db } from '../firebase';
 
-    useEffect(() => {
-      const fetchRequests = async () => {
-        try {
-          const requestsRef = collection(db, 'requests');
-          const snapshot = await getDocs(requestsRef);
-          const requestsData = snapshot.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-          }));
-          setRequests(requestsData);
-        } catch (error) {
-          console.error('Error fetching requests: ', error);
-        }
-      };
-  
-      fetchRequests();
-    }, []);
-  
+const RequestsList = () => {
+  const [requests, setRequests] = useState([]);
+
+  useEffect(() => {
+    const fetchRequests = async () => {
+      try {
+        const requestsRef = collection(db, 'requests');
+        const snapshot = await getDocs(requestsRef);
+        const requestsData = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setRequests(requestsData);
+      } catch (error) {
+        console.error('Error fetching requests: ', error);
+      }
+    };
+
+    fetchRequests();
+  }, []);
+
   return (
     <div>
-      <h1>Requests Page</h1>
-      <div>
       <h2>Requests List</h2>
       <ul>
         {requests.map((request) => (
@@ -44,8 +43,8 @@ const Requests = () => {
           </li>
         ))}
       </ul>
-    </div>    </div>
+    </div>
   );
 };
 
-export default Requests;
+export default RequestsList;
