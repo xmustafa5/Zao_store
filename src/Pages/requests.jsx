@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase'
+import  './items.css';
+import  './requests.css';
 const Requests = () => {
     const [requests, setRequests] = useState([]);
 

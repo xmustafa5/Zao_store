@@ -1,0 +1,21 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; /*ينزل الكروت بالرسبومسف*/
+  }
+  .borditem {
+    display: block;
+    background-color: var(--scolor) ;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  @media (min-width: 111px ) and (max-width: 400px) {
+    .borditem {
+      display: block;
+      background-color: var(--scolor) ;
+      padding: 4px;
+      border-radius: 10px;width: 95%;
+    }
+  }
