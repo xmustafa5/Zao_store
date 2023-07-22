@@ -10,14 +10,14 @@ import { db } from "../firebase";
 import "./Model.css";
 import { Link } from "react-router-dom";
 const Popup = ({
-  setDiscountCode,
-  discountCode,
-  selectedProduct,
-  price,
-  prices,
   applyDiscountCode,
   setIsOverlayVisible,
   setIsPopupOpen,
+  prices,
+  price,
+  discountCode, // Access discountCode as a prop
+  setDiscountCode, // Access setDiscountCode as a prop
+  selectedProduct,
 }) => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
