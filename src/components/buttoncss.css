@@ -81,3 +81,31 @@
   background-color: #17212b !important;  transform: translateY(-8px);
   color: var(--blcolor ) !important;
 }
+
+
+.btntext5 {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 20px 14px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.btntext5 {
+  padding: 2px 18px !important;
+  font-size: 22px !important;
+  font-weight: 500;
+}
+
+.btntext5 {
+  background: var(--fcolor);
+  transition: 0.7s ease;
+  color: #0a0a33 !important;
+  transition: all 250ms;
+
+}
+.btntext5:hover {
+  background-color: #17212b !important;  
+  color: var(--blcolor ) !important;
+}

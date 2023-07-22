@@ -1,12 +1,16 @@
 /* Dashpord.css */
 
 .dashboard-form {
-    display: flex;
-    align-items: center;
+
     margin-top: 20px;
     gap: 5px;
+    direction: rtl;
   }
-  
+  .dddddddddd{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
   .dashboard-input {
     padding: 10px;
     margin-bottom: 10px;

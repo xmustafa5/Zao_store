@@ -41,13 +41,21 @@ const Dashboard = () => {
     setUsageCount((prevCount) => Math.max(prevCount - 1, 0));
   };
   return (
-    <form onSubmit={handleSubmit} className="dashboard-form">
+    <form onSubmit={handleSubmit} className="dashboard-form ">
+      <div className="mb-4">
+              <h1 className="fex titles">اضافه دسكاونت</h1>
+
+      </div>
+        <div className="flex gap-5 dddddddddd">
+
        <input
         type="text"
         name="code"
         placeholder="code"
         value={code}
         onChange={(e) => setCode(e.target.value)}
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+
       />
        <div className="dashboard-number-input form-control quantity"> {/* Use a div as the container */}
         <button type="button" onClick={handleDecrement}>
@@ -58,7 +66,7 @@ const Dashboard = () => {
           name="usageCount"
           placeholder="Enter usage count"
           value={usageCount}
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500  w-12 text-center p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500  w-10 text-center p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 
           onChange={(e) => setUsageCount(Number(e.target.value))}
         />
@@ -66,7 +74,14 @@ const Dashboard = () => {
           +
         </button>
       </div>
-      <button type="submit">Buy Now</button>
+      <div className={"homebtngroup1 dddddddddd"}>
+                <button className={"btnbtnprimary"} >
+                  <p className={"btntext5"}>اضافه</p>
+                  <span className={"square"}></span>
+                </button>
+              </div>
+      </div>
+
     </form>
   );
 };
