@@ -137,38 +137,33 @@ const Popup = ({
           class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         />
       </div>
-      <div className="mb-5">
-        <label
-          for="apply-discount-checkbox"
-          className="block mb-2 containetinput text-gray-900 dark:text-white"
-        >
-          Apply Discount
-        </label>
-        <input
-          type="checkbox"
-          id="apply-discount-checkbox"
-          checked={discountEnabled}
-          onChange={(e) => setDiscountEnabled(e.target.checked)}
-          className="mr-2"
-        />
-      </div>
+      <div class="flex items-center mb-4">
+    <input id="default-checkbox" type="checkbox"checked={discountEnabled}
+          onChange={(e) => setDiscountEnabled(e.target.checked)} value="" class="w-4 h-4 0 dark:focus:ring-orange-600 dark:ring-offset-gray-800   dark:border-gray-600"/>
+    <label for="default-checkbox" class="mr-2  font-medium text-gray-900 dark:text-gray-300"> لدي كود الخصم</label>
+</div>
 
-      {discountEnabled && (
+      
         <div className="mb-5">
           <label
             for="discount-input"
             className="block mb-2 containetinput text-gray-900 dark:text-white"
           >
-            Discount Code
+           كود الخصم
           </label>
-          <div className="relative discontinput">
+          <div className={`relative discontinput ${discountEnabled ? "" : 'opacity-70'}`}>
             <input
               value={discountCode}
               onChange={handleDiscountCodeChange}
               type="text"
               id="discount-input"
-              className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-700 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              disabled={!discountEnabled} // Add the disabled attribute based on discountEnabled state
+              className={`block w-full p-4 ${discountEnabled ? '' : "cursor-not-allowed"}
+                
+              } pl-10 text-sm text-gray-900 border  border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-700 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
             />
+  
+              
             <button
               onClick={applyDiscountCode}
               type="button"
@@ -179,9 +174,10 @@ const Popup = ({
             <div className="text-white checkprice absolute left-16 bottom-2.5  z-10  font-medium rounded-md text-sm px-4 py-1.5">
               <p className="">{price} الف</p>
             </div>
+
           </div>
         </div>
-      )}
+      
       {/* <input
      type="text"
    
