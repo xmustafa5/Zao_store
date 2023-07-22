@@ -1,15 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
+/* :root {
   --fcolor: #1f59b9;
   --scolor: #182557;
-  --hcolor: #3d3799;
-  --thcolor: #e1702f;
-  --blcolor: #e48b2a;
+  --hcolor: #2D1857;
+  --thcolor: #E48B2A;
+  --blcolor: #E0A02F;
   --bllcolor: #2d6acd;
+} */
+:root {
+  --fcolor: #1F58BD;
+  --scolor: #1D115C;
+  --hcolor: #251A5C;
+  --thcolor: #F2822E;
+  --blcolor: #FF9E1C;
+  --bllcolor: #1F58BD;
 }
-
 
 * {
    margin: 0;
@@ -330,7 +337,7 @@ section {
 .fot {
   height: 100%;
   width: 100%;
-  background-color: #182557 !important;
+  background-color: var(--scolor) !important;
   display: flex;
   justify-content: center;
   align-items: center;

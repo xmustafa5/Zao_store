@@ -1,11 +1,4 @@
-:root {
-    --fcolor: #1f59b9;
-  --scolor: #182557;
-  --hcolor: #3d3799;
-  --thcolor: #e1702f;
-  --blcolor: #e48b2a;
-  --bllcolor: #2d6acd;
-}
+
 .prho{
     background-color: var(--scolor) !important;
 }
@@ -201,29 +194,6 @@
     margin-left: 40px;
   }
   
-  .btntext {
-    position: relative;
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 8px;
-    color: #ffffff;
-    padding: 20px 45px;
-    text-transform: uppercase;
-    overflow: hidden;
-  }
-  .btntext {
-    position: relative;
-    z-index: 5;
-  }
-  
-  .btntext {
-    background: var(--blcolor);
-    transition: 0.3s ease;
-  }
-  .btntext:hover {
-    background-color: var(--hcolor) !important;
-  }
   
   @media (min-width: 375px) {
     .sectionsubtitle {

@@ -1,11 +1,4 @@
-:root {
-  --fcolor: #1f59b9;
-  --scolor: #182557;
-  --hcolor: #3d3799;
-  --thcolor: #e1702f;
-  --blcolor: #e48b2a;
-  --bllcolor: #2d6acd;
-}
+
   
 .homebtngroup1 {
     display: flex;
@@ -40,7 +33,7 @@
   }
   .btntext1:hover {
     background-color: #17212b !important;  transform: translateY(-8px);
-    color: #12d0c5 !important;
+    color: var(--blcolor) !important;
   }
   .btntext2{
     font-size: 14px;
