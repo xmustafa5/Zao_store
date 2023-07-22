@@ -21,7 +21,7 @@ const Cards = ({
   
 }) => {
   const [discountCode, setDiscountCode] = useState("");
-
+  
   const applyDiscountCode = () => {
     try {
       const product = products.find((p) => p.id === selectedProduct.id);
@@ -69,7 +69,7 @@ const Cards = ({
               </button> */}
 
               <div className={"homebtngroup1"}>
-                  <Link to={productLink}  className="btnbtnprimary">
+                  <Link to={productLink} className="btnbtnprimary">
                   <p className="btntext1">Buy</p>
                   <span className="square"></span>
                  </Link>
