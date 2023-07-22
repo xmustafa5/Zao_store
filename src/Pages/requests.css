@@ -1,3 +1,12 @@
+:root {
+  --fcolor: #1f59b9;
+  --scolor: #182557;
+  --hcolor: #3d3799;
+  --thcolor: #e1702f;
+  --blcolor: #e48b2a;
+  --bllcolor: #2d6acd;
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -18,4 +27,69 @@
       padding: 4px;
       border-radius: 10px;width: 95%;
     }
+  }
+  .inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding-top: 10px;
+  }
+  .projcardo {
+    background-color: var(--fcolor);
+    border: 1px solid var(--scolor);
+    min-height: 14em;
+    width: 20em;
+    overflow: hidden; /**/
+    border-radius: 10px;
+    margin: 20px;
+    /* transition: all 0.7s ease; */
+   top: 0;
+  position: relative;  transition: all 0.3s ease-out;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .sssso{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+  
+  }
+  .projinfo {
+    padding: 0.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    gap: 6px;
+  }
+  .projtitle {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+  .titlecard {
+    color: #fff;
+  }
+  .prices {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .prices p {
+    font-size: 16px;
+  }
+  .iopp {
+    font-size: 1.2em !important;
+    color: var(--blcolor);
   }

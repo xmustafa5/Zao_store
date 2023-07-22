@@ -47,7 +47,6 @@ const Requests = () => {
               {request.productData && (
 
                       <div className="projcardo">
-                                        <img src={request.productData.imgUrl} alt={request.productData.title} />
 
                         <div className="sssso">
                           <div className="projimg">
