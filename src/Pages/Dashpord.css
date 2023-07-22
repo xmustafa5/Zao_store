@@ -1,0 +1,65 @@
+/* Dashpord.css */
+
+.dashboard-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .dashboard-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .dashboard-number-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .dashboard-number-input input[type="number"] {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+  .dashboard-number-input input[type="number"]::-webkit-inner-spin-button,
+.dashboard-number-input input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.inline-group {
+    max-width: 9rem;
+    padding: .5rem;
+  }
+  
+  .inline-group .form-control {
+    text-align: right;
+  }
+  .dashboard-number-input button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dashboard-number-input button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add a special effect on focus */
+  .dashboard-number-input:focus-within {
+    box-shadow: 0 0 8px #007bff;
+  }
+  

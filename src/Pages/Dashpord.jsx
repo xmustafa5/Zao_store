@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { collection, getDocs, addDoc, doc, updateDoc, setDoc } from "firebase/firestore";
 
 import { db } from "../firebase"; // Assuming you have exported the Firestore instance as 'db'
+import "./Dashpord.css";
 
 const Dashboard = () => {
   const [code, setCode] = useState("");
@@ -32,23 +33,37 @@ const Dashboard = () => {
       console.error("Error getting products: ", error);
     }
   };
+  const handleIncrement = () => {
+    setUsageCount((prevCount) => prevCount + 1);
+  };
 
+  const handleDecrement = () => {
+    setUsageCount((prevCount) => Math.max(prevCount - 1, 0));
+  };
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <form onSubmit={handleSubmit} className="dashboard-form">
+       <input
         type="text"
         name="code"
         placeholder="code"
         value={code}
         onChange={(e) => setCode(e.target.value)}
       />
-      <input
-        type="number"
-        name="usageCount"
-        placeholder="usage count"
-        value={usageCount}
-        onChange={(e) => setUsageCount(Number(e.target.value))}
-      />
+       <div className="dashboard-number-input form-control quantity"> {/* Use a div as the container */}
+        <button type="button" onClick={handleDecrement}>
+          -
+        </button>
+        <input
+          type="number"
+          name="usageCount"
+          placeholder="Enter usage count"
+          value={usageCount}
+          onChange={(e) => setUsageCount(Number(e.target.value))}
+        />
+        <button type="button" onClick={handleIncrement}>
+          +
+        </button>
+      </div>
       <button type="submit">Buy Now</button>
     </form>
   );

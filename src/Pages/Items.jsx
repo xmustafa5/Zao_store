@@ -196,7 +196,7 @@ const Items = () => {
           </div>
         </form>
       </div>
-      <div>
+      <div className="fex ">
         <Dashpord/>
       </div>
       <div className="proo">
