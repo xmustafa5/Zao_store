@@ -80,6 +80,9 @@ const Dashboard = () => {
                   <span className={"square"}></span>
                 </button>
               </div>
+              <div className="text-white checkprice   z-10  font-medium rounded-md text-sm px-4 py-1.5">
+              <p className=""> الف</p>
+            </div>
       </div>
 
     </form>

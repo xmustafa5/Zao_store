@@ -20,7 +20,9 @@
   }
   
  
-  
+  .checkprice{
+    background-color: var(--thcolor);
+  }
   .dashboard-number-input input[type="number"] {
     flex: 1;
     padding: 5px;
