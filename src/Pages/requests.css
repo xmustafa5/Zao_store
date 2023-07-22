@@ -6,7 +6,17 @@
   --blcolor: #e48b2a;
   --bllcolor: #2d6acd;
 }
-
+.ddde{
+  height: 60px;
+  background-color: #182557;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoe{
+  width: 100px;
+}
 .content {
     display: flex;
     justify-content: center;
@@ -110,8 +120,14 @@
     font-size: 1.2em !important;
     color: var(--blcolor);
   }
+  
 
+  .prfo {
+    background-color: var(--hcolor) !important;
 
+  }
+
+  
   @media (min-width: 111px ) and (max-width: 370px) {
     section{ 
       padding-left: 10px;
@@ -175,7 +191,10 @@
       width: 50px !important;
       height: 40px;
     
-    }
+    
+    }  .inputs{
+        width: 100%;
+      }
     .sels{
     width: 70%;
     }
@@ -184,7 +203,16 @@
     margin-top: 10px;
     gap: 14px !important;
     }
-    
+    .projcardo{
+      width: 18rem;
+      min-height: 12em;
+    }
+    .borditem{
+      padding: 1px;
+      border-radius: 10px;
+      width: 300px;
+      display: flex;
+    }
     }
     /* outmedit */
     
@@ -260,19 +288,43 @@
       margin-top: 10px;
       gap: 14px !important;
      }
-     
+     .projcardo{
+      width: 18rem;
+      min-height: 12em;
+    }
+    .borditem{
+      padding: 1px;
+      border-radius: 10px;
+      width: 300px;
+      display: flex;
+    }
       }
     
     
     /* Styles for devices with a width between 321px and 767px */
-    @media (min-width: 570px) and (max-width: 770px) {
-      section{
+    @media (min-width: 570px) and (max-width: 779px) {
+      .section{
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 10px;
       }
-      .projcard{
-        width: 20rem;
+      
+      .borditem{
+        padding: 1px;
+        border-radius: 10px;
+        width: 260px;
+        display: flex;
+        background-color: #e1702f;
+      }
+      .projcardo{
+        width: 16rem;
+        min-height: 10em;
+      }
+      .projinfo{
+        padding: 3px;
+      }
+      .titlecard{
+        font-size: 14px !important;
       }
       .radio-button{
         font-size: 14px !important;
@@ -320,7 +372,7 @@
         padding-top: 10px;
       }
       .projcard{
-        width: 20rem;
+        width: 19rem;
       }
       .radio-button{
         font-size: 14px !important;
