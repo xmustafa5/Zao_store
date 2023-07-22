@@ -59,7 +59,7 @@ const Shop = () => {
       {products.map((product) => (
         <Cards
         key={product.id}
-        imgUrl={product.imgUrl} // Pass the correct imgUrl prop
+        imgUrl={product.imageUrl1} // Pass the correct imgUrl prop
         title={product.title} // Pass the correct title prop
         prices={product.prices} // Pass the correct prices prop
         handleBuyProduct={() => handleBuyProduct(product)} // Pass the handleBuyProduct function with the product

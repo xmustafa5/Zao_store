@@ -32,14 +32,23 @@ const Popup = ({
 
     try {
       const productData = {
+        id: selectedProduct.id,
+        title: selectedProduct.title,
+        imgUrl: selectedProduct.imgUrl || 0,
+        price: price || 0, // Set a default value of 0 if price is null
+      };
+      const requestData = {
         name,
         location,
         number,
-        price: price || 0, // Set a default value of 0 if price is null
+        productData, // Include the selected product information in the request data
+        // ... (other information you want to include in the request)
       };
 
+      
+        applyDiscountCode();
       // Apply discount code if it matches the selected product
-      applyDiscountCode();
+      // applyDiscountCode();
 
       // Decrease the usageCount in all product documents
       const productsQuerySnapshot = await getDocs(collection(db, "products"));
@@ -57,7 +66,7 @@ const Popup = ({
       });
 
       // Add the productData to the Firestore collection
-      const docRef = await addDoc(collection(db, "requests"), productData);
+      const docRef = await addDoc(collection(db, "requests"), requestData);
       console.log("Document written with ID: ", docRef.id);
 
       // Reset the input fields
@@ -65,8 +74,6 @@ const Popup = ({
       setLocation("");
       setNumber("");
       setDiscountCode("");
-
-      // Close the popup
       setIsPopupOpen(false);
       setIsOverlayVisible(false);
     } catch (error) {
