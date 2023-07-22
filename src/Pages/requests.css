@@ -1,7 +1,7 @@
 
 .ddde{
   height: 60px;
-  background-color: #182557;
+  background-color: var(--scolor);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@
     display: flex;
     justify-content: center;
     background-color: #fff;
-  
+    
   }
     
   

@@ -3,9 +3,10 @@ import downShape from "../assets/images/shape-down-orange.png";
 import upShape from "../assets/images/shape-up-orange.png";
 import Popup from "./Popup";
 import "./cards.css";
+import { Link } from "react-router-dom";
 const Cards = ({
 
-  
+  productLink,
   handleBuyProduct,
   isOverlayVisible,
   isPopupOpen,
@@ -70,8 +71,10 @@ const Cards = ({
 
               <div className={"homebtngroup1"}>
                 <button className={"btnbtnprimary"} onClick={handleBuyProduct}>
-                  <p className={"btntext1"}>Buy</p>
-                  <span className={"square"}></span>
+                <Link to={productLink} className="btnbtnprimary">
+              <p className="btntext1">Buy</p>
+             <span className="square"></span>
+             </Link>
                 </button>
               </div>
             </div>

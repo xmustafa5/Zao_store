@@ -9,9 +9,11 @@ import {
 import { db } from "../firebase";
 import Cards from "./Cards";
 import "./buttoncss.css"
+import { useParams } from 'react-router-dom';
+
 const Shop = () => {
   const [products, setProducts] = useState([]);
-
+  const { productId } = useParams();
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [prices, setPrice] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -71,6 +73,8 @@ const Shop = () => {
         setIsOverlayVisible={setIsOverlayVisible}
         setIsPopupOpen={setIsPopupOpen}
         prices={prices}
+        productLink={`/single-product/${product.id}`}
+
           />        
 
       ))}
