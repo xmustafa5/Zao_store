@@ -197,7 +197,7 @@ const Items = () => {
         </form>
       </div>
       <div className="fex ">
-        <Dashpord/>
+        <Dashpord products={products}/>
       </div>
       <div className="proo">
         <h1 className="fex mt-10 text-lg mb-6  titles">المنتجات</h1>
@@ -253,7 +253,7 @@ const Items = () => {
                     {product.priceCode}
                   </td>
                   <td class="vvv px-6 py-4 text-center centertd">
-                    {product.code}
+                    {product.code} || {product.usageCount}
                   </td>
                   <td class="vvv px-6 py-4 text-center centertd">
                     <Link

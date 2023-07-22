@@ -4,7 +4,7 @@ import { collection, getDocs, addDoc, doc, updateDoc, setDoc } from "firebase/fi
 import { db } from "../firebase"; // Assuming you have exported the Firestore instance as 'db'
 import "./Dashpord.css";
 
-const Dashboard = () => {
+const Dashboard = ({products}) => {
   const [code, setCode] = useState("");
   const [usageCount, setUsageCount] = useState(0);
 
@@ -40,6 +40,7 @@ const Dashboard = () => {
   const handleDecrement = () => {
     setUsageCount((prevCount) => Math.max(prevCount - 1, 0));
   };
+
   return (
     <form onSubmit={handleSubmit} className="dashboard-form ">
       <div className="mb-4">
@@ -80,9 +81,7 @@ const Dashboard = () => {
                   <span className={"square"}></span>
                 </button>
               </div>
-              <div className="text-white checkprice   z-10  font-medium rounded-md text-sm px-4 py-1.5">
-              <p className=""> الف</p>
-            </div>
+             
       </div>
 
     </form>
