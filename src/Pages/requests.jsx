@@ -3,6 +3,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase'
 import  './items.css';
 import  './requests.css';
+import  '../components/cards.css';
 const Requests = () => {
     const [requests, setRequests] = useState([]);
 
@@ -30,7 +31,7 @@ const Requests = () => {
       <h1>Requests</h1>
     </div>
     {requests.length > 0 ? (
-      <ul className="content d">
+      <ul className="content d gap-5">
         {requests.map((request) => (
           <li className="borditem " key={request.id}>
             <div className="pb-2">
@@ -46,10 +47,10 @@ const Requests = () => {
               <div></div>
               {request.productData && (
 
-                      <div className="projcardo">
+                      <div className="projcardo ga">
 
                         <div className="sssso">
-                          <div className="projimg">
+                          <div className="projimgg">
                             <img src={request.productData.imgUrl} alt="Selected Option" />
                           </div>
                           {/* <img src={imageSource} alt="Selected Option"  /> */}
@@ -73,7 +74,7 @@ const Requests = () => {
                       </div>
                               )}
 
-              ) 
+        
             </div>
           
           </li>
