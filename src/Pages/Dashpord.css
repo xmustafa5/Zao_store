@@ -37,14 +37,7 @@
   -webkit-appearance: none;
   margin: 0;
 }
-.inline-group {
-    max-width: 9rem;
-    padding: .5rem;
-  }
-  
-  .inline-group .form-control {
-    text-align: right;
-  }
+
   .dashboard-number-input button {
     background-color: #007bff;
     color: #fff;
@@ -59,7 +52,5 @@
   }
   
   /* Add a special effect on focus */
-  .dashboard-number-input:focus-within {
-    box-shadow: 0 0 8px #007bff;
-  }
+ 
   
