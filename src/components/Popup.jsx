@@ -7,8 +7,12 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { db } from "../firebase";
+import Smpop from "./Smpop";
+
 import "./Model.css";
 import { Link } from "react-router-dom";
+import downShape from "../assets/images/shape-down-orange.png";
+import upShape from "../assets/images/shape-up-orange.png";
 const Popup = ({
   setDiscountCode,
   discountCode,
@@ -18,68 +22,19 @@ const Popup = ({
   applyDiscountCode,
   setIsOverlayVisible,
   setIsPopupOpen,
+  handleBuyProduct,
+  isOverlayVisible,
+  isPopupOpen,
 }) => {
-  const [name, setName] = useState("");
-  const [location, setLocation] = useState("");
-  const [number, setNumber] = useState("");
-  const [discountEnabled, setDiscountEnabled] = useState(false);
-
-  const handleDiscountCodeChange = (e) => {
-    setDiscountCode(e.target.value);
+  const [isPopupOpent, setIsPopupOpent] = useState(false);
+  const [isOverlayVisiblet, setIsOverlayVisiblet] = useState(false);
+  const handleBuyProducttow = (product) => {
+   
+    setIsPopupOpent(!isPopupOpent);
+    setIsOverlayVisiblet(!isOverlayVisiblet);
+    console.log("dd");
   };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const productData = {
-        id: selectedProduct.id,
-        title: selectedProduct.title,
-        imgUrl: selectedProduct.imageUrl1,
-        price: price || 0, // Set a default value of 0 if price is null
-      };
-      const requestData = {
-        name,
-        location,
-        number,
-        productData, // Include the selected product information in the request data
-        // ... (other information you want to include in the request)
-      };
-
-      applyDiscountCode();
-      // Apply discount code if it matches the selected product
-      // applyDiscountCode();
-
-      // Decrease the usageCount in all product documents
-      const productsQuerySnapshot = await getDocs(collection(db, "products"));
-      productsQuerySnapshot.forEach(async (productDoc) => {
-        const productRef = doc(db, "products", productDoc.id);
-        const productData = productDoc.data();
-        if (
-          productData.code === discountCode &&
-          productData.usageCount &&
-          productData.usageCount > 0
-        ) {
-          const updatedUsageCount = productData.usageCount - 1;
-          await updateDoc(productRef, { usageCount: updatedUsageCount });
-        }
-      });
-
-      // Add the productData to the Firestore collection
-      const docRef = await addDoc(collection(db, "requests"), requestData);
-      console.log("Document written with ID: ", docRef.id);
-
-      // Reset the input fields
-      setName("");
-      setLocation("");
-      setNumber("");
-      setDiscountCode("");
-      setIsPopupOpen(false);
-      setIsOverlayVisible(false);
-    } catch (error) {
-      console.error("Error adding document: ", error);
-    }
-  };
+ 
   return (
     <div className="popup-content">
     <div className="left-popup"></div>
@@ -97,7 +52,32 @@ const Popup = ({
       {selectedProduct.discrabe}
       </p>
     </div>
-
+    <div className={"homebtngroup1"}>
+                <button className={"btnbtnprimary"} onClick={handleBuyProducttow}>
+                  <p className={"btntext1"}>Buy</p>
+                  <span className={"square"}></span>
+                </button>
+              </div>
+     {isOverlayVisiblet && <div className="overlay"></div>}
+      {isPopupOpent && (
+        <div className="modal">
+          <div onClick={handleBuyProducttow} className="overlay"></div>
+          <div className="modal-content  ">
+            <img src={downShape} className="downShap" alt="downShape" />
+            <img src={upShape} className="upShap" alt="upShape" />
+            <Smpop
+              applyDiscountCode={applyDiscountCode}
+              setIsOverlayVisible={setIsOverlayVisible}
+              setIsPopupOpen={setIsPopupOpen}
+              prices={prices}
+              price={price}
+              discountCode={discountCode}
+              setDiscountCode={setDiscountCode}
+              selectedProduct={selectedProduct}
+              />
+          </div>
+        </div>
+      )} 
   </div>
     
     // {/* <div className="popup">
