@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-
+import downShape from "../assets/images/shape-down-orange.png";
+import upShape from "../assets/images/shape-up-orange.png";
+import Popup from "./Popup";
 import "./cards.css";
-import { Link } from "react-router-dom";
 const Cards = ({
- 
-  productLink,
+
+  
   handleBuyProduct,
   isOverlayVisible,
   isPopupOpen,
@@ -18,10 +19,9 @@ const Cards = ({
   products,
   selectedProduct,
   
-  
 }) => {
   const [discountCode, setDiscountCode] = useState("");
-  
+
   const applyDiscountCode = () => {
     try {
       const product = products.find((p) => p.id === selectedProduct.id);
@@ -69,17 +69,36 @@ const Cards = ({
               </button> */}
 
               <div className={"homebtngroup1"}>
-                  <Link to={productLink} className="btnbtnprimary">
-                  <p className="btntext1">Buy</p>
-                  <span className="square"></span>
-                 </Link>
+                <button className={"btnbtnprimary"} onClick={handleBuyProduct}>
+                  <p className={"btntext1"}>Buy</p>
+                  <span className={"square"}></span>
+                </button>
               </div>
             </div>
           </div>
         </li>
       </ul>
 
-  
+      {isOverlayVisible && <div className="overlay"></div>}
+      {isPopupOpen && (
+        <div className="modal">
+          <div onClick={handleBuyProduct} className="overlay"></div>
+          <div className="modal-content  ">
+            <img src={downShape} className="downShap" alt="downShape" />
+            <img src={upShape} className="upShap" alt="upShape" />
+            <Popup
+              applyDiscountCode={applyDiscountCode}
+              setIsOverlayVisible={setIsOverlayVisible}
+              setIsPopupOpen={setIsPopupOpen}
+              prices={prices}
+              price={price}
+              discountCode={discountCode}
+              setDiscountCode={setDiscountCode}
+              selectedProduct={selectedProduct}
+              />
+          </div>
+        </div>
+      )}
 
       {/* {popupVisible && selectedProduct && (
         <Popup selectedProduct={selectedProduct} products={products} setPopupVisible={setPopupVisible}  setPrice={setPrice} price={price} products={products}/>

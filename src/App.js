@@ -4,7 +4,7 @@ import Layout from "./layout/Index";
 import { Route, Routes } from 'react-router-dom';
 import Items from "./Pages/Items";
 import Requests from "./Pages/requests";
-import SingleProduct from "./Pages/SingleProduct";
+
 
 function App() {
   return (
@@ -15,7 +15,6 @@ function App() {
    <Route path="/Dashpord" element={<Dashpord/>} />
    <Route path="/Items" element={<Items/> } />
    <Route path="/Requests" element={<Requests/> } />
-   <Route path="/single-product/:productId" element={<SingleProduct />} />
     </Routes>
     </Layout>
     </>
