@@ -181,7 +181,7 @@ section {
     }
     .modal-content{
       width: 320px;
-    height: 490px; gap: 0;  }
+    height: 530px !important; gap: 0;  }
     .input33{
       width: 70%;
       height: 40px;

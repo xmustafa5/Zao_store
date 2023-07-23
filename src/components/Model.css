@@ -13,11 +13,30 @@
     z-index: 10;
 
 }
-.modal{
-
+.modalt, .overlayt {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 220;
+    
+}
+.modal-contentt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: var(--scolor);
+    border-radius: 3px;
+    width: 100% !important;
+    height: 100vh;
+    z-index: 230 ;
+    overflow: hidden;
 }
 .modal, .overlay {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
@@ -87,3 +106,80 @@
   .checkprice{
     background-color: var(--scolor);
   }
+
+  /* Styles for devices with a width between 321px and 767px */
+@media (min-width: 111px ) and (max-width: 370px) {
+    .continerinput{
+        width: 100%;
+        margin-right: 50px;
+        font-size: 14px;
+
+    }
+    .containetinput{
+        font-size: 14px;
+    }
+    .inp {
+        height: 40px;
+        max-width: calc(100% - 40px);
+        font-size: 14px;
+
+    }
+    .check{
+        left: 50px;
+        bottom: 4px;
+        font-size: 12px;
+    }
+    .checkprice{
+        left: 100px; 
+        bottom: 4px;
+        font-size: 10px;
+    }
+   
+    }
+    /* outmedit */
+    
+    @media ( min-width: 370px) and (max-width: 570px) {
+      
+      
+        .continerinput{
+            width: 100%;
+            margin-right: 20px;
+            font-size: 16px;
+        }
+        .inp {
+      
+            max-width: calc(100% - 6px);
+        }
+    
+      }
+    
+    
+    /* Styles for devices with a width between 321px and 767px */
+    @media (min-width: 570px) and (max-width: 770px) {
+    
+        .continerinput{
+            width: 100%;
+            margin-right: 0px;
+        }
+        .inp {
+      
+            max-width: calc(100% - 1px);
+        }
+    
+      }
+    
+    /* Styles for devices with a width between 768px and 1023px */
+    @media (min-width: 770px) and (max-width: 992px) {
+
+    }
+    @media (min-width: 992px) and (max-width: 1095px)  {
+
+    }
+    /* Styles for devices with a width of 1024px or larger */
+    @media (min-width: 1095px) and (max-width: 1600px)  {
+
+    }
+   
+  
+  
+  

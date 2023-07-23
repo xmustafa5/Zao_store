@@ -95,7 +95,7 @@ const Smpop = ({
 <div className="smpop">
       {/* Your first popup content here */}
       <h2>First Popup Content</h2>
-      <button onClick={handleBuyButtonClick}>Buy</button>
+      <button onClick={handleBuyButtonClick}>شراء</button>
 
       {showSecondPopup && (
         <div className="second-popup-overlay">

@@ -79,6 +79,7 @@ const Cards = ({
         </li>
       </ul>
 
+      {isOverlayVisible && <div className="overlay"></div>}
       {isPopupOpen && (
         <div className="modal">
           <div onClick={handleBuyProduct} className="overlay"></div>
@@ -94,9 +95,6 @@ const Cards = ({
               discountCode={discountCode}
               setDiscountCode={setDiscountCode}
               selectedProduct={selectedProduct}
-              handleBuyProduct={handleBuyProduct}
-              isOverlayVisible={isOverlayVisible}
-              isPopupOpen={isPopupOpen}
               />
           </div>
         </div>
