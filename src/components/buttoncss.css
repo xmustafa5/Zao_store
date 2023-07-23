@@ -64,9 +64,9 @@
 }
 
 .btntext3 {
-  background: var(--bllcolor);
+  background: #30a3e6;
   transition: 0.7s ease;
-  color: #0a0a33 !important;
+  color: #17212b !important;
   transition: all 250ms;
 
 }

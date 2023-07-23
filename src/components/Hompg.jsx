@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import bannerline from "../assets/images/banner-line-11.png";
+import bannerline from "../assets/images/banner-line4.png";
 import bannerimgbg from "../assets/images/banner-img-bg11.png";
 import slideImage from "../assets/images/1230.png";
 import bannerimg from "../assets/images/1001.png";

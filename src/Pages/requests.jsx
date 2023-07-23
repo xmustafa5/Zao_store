@@ -62,14 +62,14 @@ const Requests = () => {
      
 
             <div className="pb-2">
-              <div className="fex inputs">
-                <div className="flex w-full justify-center text-lg mb-2">
+              <div className="fex inputs ">
+                <div className="flex w-full justify-center frsf text-lg mb-2">
                   <p> {request.name}</p>
                   <p> - {request.location}</p>
                   <p>- {request.number  }</p>
                 </div>
              
-                <h1 className="text-xl mt-2">الطلب:</h1>
+                <h1 className="text-xl mt-2 frsf"> الطلب  </h1>
               </div>
               <div></div>
               {request.productData && (
@@ -78,7 +78,10 @@ const Requests = () => {
 
                         <div className="sssso">
                           <div className="projimgg">
-                            <img src={request.productData.imgUrl} alt="Selected Option" />
+                            <div className='imggg'>
+                                                          <img src={request.productData.imgUrl} alt="Selected Option" />
+
+                            </div>
                           </div>
                           {/* <img src={imageSource} alt="Selected Option"  /> */}
                         </div>
