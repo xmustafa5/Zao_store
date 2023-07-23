@@ -21,6 +21,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import "./Hompg.css";
 const Hompg = () => {
+
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
@@ -29,6 +30,7 @@ const Hompg = () => {
       shopSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the "shop" section
     }
   };
+ 
   return (
     <div className="home  ">
       <div className={"home22"}>
