@@ -500,14 +500,46 @@ direction: rtl;  }
     }    */
   
   /************3333333333333***************/
-  @media (min-width: 111px ) and (max-width:400px) {
+  @media (min-width: 111px ) and (max-width:500px) {
     .coo{
       display: block;
-      position: absolute;
-      top: 450px;
-      left: 300px;
+     
         z-index: 2000;
-      
+
+      }
+      .co{
+        animation: icon3 7s linear infinite;
+
+        color: #0a0a33;
+        position: absolute;
+      top: 430px;
+      left: 260px;
+        justify-content: start;
+      }
+      .conect{
+        display: none;
+      }
+      .co1{
+        animation: icon1 6s linear infinite;
+
+        color: #0a0a33;
+        position: absolute;
+      top: 498px;
+      left: 290px;
+        justify-content: start;
+      }
+      .c{
+        background-color: var(--blcolor) !important;
+        width: 50px;
+        height: 40px;
+        padding: 4px;
+        margin: 0;
+        border-radius: 10px;
+
+      }
+      .o{
+        background-color: #17212b;
+        
       }
   }
 

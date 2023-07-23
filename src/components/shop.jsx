@@ -19,12 +19,7 @@ const Shop = ({products,isLoading}) => {
     setIsPopupOpen(!isPopupOpen);
     setIsOverlayVisible(!isOverlayVisible);
   };
-
- 
-
-
-
- 
+  
   return (
     <div>
           <section className="pro"   id="shop">

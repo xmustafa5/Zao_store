@@ -1,9 +1,4 @@
-:root {
-  --fcolor: #17212b;
-  --scolor: #242f3d;
-  --thcolor: #12d0c5;
-  --blcolor: #30a3e6;
-}
+
 .loading {
     width: 100%;
     height: 100vh;
