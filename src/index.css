@@ -83,7 +83,7 @@ section {
   
   .fot a{
     background-color: var(--blcolor);
-    padding: 2px;margin: 10px !important;
+    padding: 2px;
     border-radius: 10px;
     color: var(--scolor) !important;
     display: grid;
@@ -91,13 +91,7 @@ section {
     transition:   0.7 ease-in-out;
   
   }
-  .fot a:hover{
-    transform: translateY(-10);
-    background-color: var(--fcolor);
-    color: var(--thcolor) !important;
-    transform: translateY(-4px);
-  
-  }
+
   .fott{
     display: flex;
     justify-content: center;
@@ -131,7 +125,10 @@ section {
   margin-top: 10px;
   gap: 14px !important;
   }
-  
+  .conect{
+    font-size: 16px !important;
+  }
+ 
   }
   /* outmedit */
   
@@ -207,8 +204,18 @@ section {
     margin-top: 10px;
     gap: 14px !important;
    }
-   
+    .conect{
+      font-size: 16px !important;
     }
+    .de{
+      width: 30px;
+      height: 30px;
+    }
+    }
+  .dddwe{
+    direction: rtl;
+    align-items: center;
+  }
   
   
   /* Styles for devices with a width between 321px and 767px */
@@ -219,7 +226,13 @@ section {
       padding-top: 10px;
     }
     .projcard{
-      width: 20rem;
+      width: 17rem !important;
+    }
+    .projtitle{
+      margin-top: 4px !important;
+    }.prices{
+      margin-top: 2px !important;
+      margin-bottom: 2px !important;
     }
     .radio-button{
       font-size: 14px !important;
@@ -254,9 +267,21 @@ section {
    .sels{
     width: 80%;
    }
+   .conect{
+    font-size: 20px !important;
+  }
+  .de{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
   
-  
-    
+    .de svg{
+      width: 24px;
+    }
     }
   
   /* Styles for devices with a width between 768px and 1023px */
@@ -352,7 +377,7 @@ hr{
 }
 .fot a{
   background-color: var(--blcolor);
-  padding: 6px;
+  padding: 4px;
   border-radius: 10px;
   color: var(--scolor) !important;
   display: grid;
@@ -361,10 +386,9 @@ hr{
 
 }
 .fot a:hover{
-  transform: translateY(-10);
-  background-color: var(--fcolor);
+  background-color: #17212b ;
   color: var(--thcolor) !important;
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 
 }
 .fott{

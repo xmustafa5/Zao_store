@@ -329,13 +329,13 @@
     text-transform: uppercase;
 direction: rtl;  }
   .conect{
-    font-size: 22px;
+    font-size: 20px;
     color: #fff;
     font-weight: 500;
     direction: rtl;
     
   }
-
+  
   .sectionsubtitle {
     display: flex;
     justify-content: center;

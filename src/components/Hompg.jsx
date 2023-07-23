@@ -17,10 +17,18 @@ import shape4 from "../assets/images/shape-4.png";
 import backLogo from "../assets/images/shape-up-orange.png";
 import upLogo from "../assets/images/shape-up-orange.png";
 import cta from "../assets/images/cta-bg-img1.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Hompg.css";
 const Hompg = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    const shopSection = document.getElementById("shop"); // Get the "shop" section by its id
+    if (shopSection) {
+      shopSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the "shop" section
+    }
+  };
   return (
     <div className="home  ">
       <div className={"home22"}>
@@ -126,17 +134,15 @@ const Hompg = () => {
             </div>
           </div>
           <div className={"homebtngroup"}>
-            <Link to="/#shop">
               <button
-                onClick={"handleButtonClick"}
-                className={"btnbtnprimary"}
+        onClick={handleButtonClick}
+        className={"btnbtnprimary"}
                 data-aos="zoom-in"
                 data-aos-duration="1400"
               >
                 <p className={"btntext"}>تصفح منتجاتنا </p>
                 <span className={"square"}></span>
               </button>
-            </Link>
             {/* <Link href="/aboutus">
               <button onClick={"handleButton1Click"}
                 className={"btnbtnsecondary"}

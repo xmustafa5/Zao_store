@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
     <Hompg/>
-    <Shop/>
+    <Shop id="shop"/>
     </>
   );
 };

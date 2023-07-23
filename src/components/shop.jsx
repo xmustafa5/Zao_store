@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef  } from "react";
 import {
   collection,
   getDocs,
@@ -44,13 +44,14 @@ const Shop = () => {
   };
 
  
+  const shopRef = useRef(null); // Create a ref for the "shop" section
 
 
 
  
   return (
     <div>
-          <section className="pro" id="shop">
+          <section className="pro" ref={shopRef}  id="shop">
           <div className="fex titles">
             
             <h2>اشتري ما يعجبك</h2>
