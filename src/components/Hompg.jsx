@@ -29,6 +29,7 @@ const Hompg = () => {
       shopSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the "shop" section
     }
   };
+  
   const { count,setcount } = useAuth();
 
   return (

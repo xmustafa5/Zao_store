@@ -4,28 +4,11 @@ import { db } from "../firebase";
 import Hompg from "../components/Hompg";
 import Shop from "./../components/Shop";
 import Loading from "./../components/Loading";
+import { useAuth } from "../context/AuthContext.js";
 
 const Home = () => {
-    const [products, setProducts] = useState([]);
+  const { isLoading,products } = useAuth();
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const productsRef = collection(db, "products");
-        const snapshot = await getDocs(productsRef);
-        const productsData = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setProducts(productsData);
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error fetching products: ", error);
-      }
-    };
-    fetchProducts();
-  }, []);
-  const [isLoading, setIsLoading] = useState(true);
   if (isLoading) {
     return <Loading />;
   }
