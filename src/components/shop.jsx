@@ -1,17 +1,42 @@
-
+import React, { useState, useEffect } from "react";
+import {
+  collection,
+  getDocs,
+  addDoc,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
+import { db } from "../firebase";
 import Cards from "./Cards";
 import "./buttoncss.css"
-import Loading from "../components/Loading";
-import { useState } from "react";
-const Shop = ({products,isLoading}) => {
+import { useParams } from 'react-router-dom';
+import { useAuth } from "../context/AuthContext";
 
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [prices, setPrice] = useState(null);
+const Shop = () => {
+  const [products, setProducts] = useState([]);
+  const { productId } = useParams();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+const { setSelectedProduct,selectedProduct,prices, setPrice } = useAuth();
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const productsRef = collection(db, "products");
+        const snapshot = await getDocs(productsRef);
+        const productsData = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setProducts(productsData);    console.log(productsData.price);
+
+      } catch (error) {
+        console.error("Error fetching products: ", error);
+      }
+    };
+    fetchProducts();
+  }, []);
 
 
- 
   const handleBuyProduct = (product) => {
     setSelectedProduct(product);
     setPrice(product.price); // Set the price to the priceCode of the selected product
@@ -19,10 +44,15 @@ const Shop = ({products,isLoading}) => {
     setIsPopupOpen(!isPopupOpen);
     setIsOverlayVisible(!isOverlayVisible);
   };
-  
+
+ 
+
+
+
+ 
   return (
     <div>
-          <section className="pro"   id="shop">
+          <section className="pro" id="shop">
           <div className="fex titles">
             
             <h2>اشتري ما يعجبك</h2>
@@ -43,6 +73,8 @@ const Shop = ({products,isLoading}) => {
         setIsOverlayVisible={setIsOverlayVisible}
         setIsPopupOpen={setIsPopupOpen}
         prices={prices}
+        productLink={`/single-product/${product.id}`}
+
           />        
 
       ))}

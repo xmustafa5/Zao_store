@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <>
-      <Hompg />
+      {/* <Hompg /> */}
       <Shop products={products}  />
     </>
   );

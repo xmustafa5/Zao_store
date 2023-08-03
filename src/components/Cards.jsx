@@ -3,9 +3,12 @@ import downShape from "../assets/images/shape-down-orange.png";
 import upShape from "../assets/images/shape-up-orange.png";
 import Popup from "./Popup";
 import "./cards.css";
+import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+
 const Cards = ({
 
-  
+  productLink,
   handleBuyProduct,
   isOverlayVisible,
   isPopupOpen,
@@ -20,22 +23,9 @@ const Cards = ({
   selectedProduct,
   
 }) => {
-  const [discountCode, setDiscountCode] = useState("");
+  const { discountCode, setDiscountCode,applyDiscountCode } = useAuth();
 
-  const applyDiscountCode = () => {
-    try {
-      const product = products.find((p) => p.id === selectedProduct.id);
-      if (product && product.priceCode && discountCode === product.code) {
-        setPrice(product.priceCode);
-        console.log("Discount applied successfully!");
-      } else {
-        setPrice(selectedProduct.price);
-        console.log("Invalid product or discount code not available");
-      }
-    } catch (error) {
-      console.error("Error applying discount code: ", error);
-    }
-  };
+
    if (isPopupOpen) {
     document.body.classList.add("active-modal");
   } else {
@@ -70,8 +60,10 @@ const Cards = ({
 
               <div className={"homebtngroup1"}>
                 <button className={"btnbtnprimary"} onClick={handleBuyProduct}>
-                  <p className={"btntext1"}>Buy</p>
-                  <span className={"square"}></span>
+                <Link to={productLink} className="btnbtnprimary">
+              <p className="btntext1">Buy</p>
+             <span className="square"></span>
+             </Link>
                 </button>
               </div>
             </div>
