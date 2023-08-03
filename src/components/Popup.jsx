@@ -18,6 +18,7 @@ const Popup = ({
   applyDiscountCode,
   setIsOverlayVisible,
   setIsPopupOpen,
+  
 }) => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
@@ -36,7 +37,9 @@ const Popup = ({
         id: selectedProduct.id,
         title: selectedProduct.title,
         imgUrl: selectedProduct.imageUrl1,
-        price: price || 0, // Set a default value of 0 if price is null
+        prices: prices , // Set a default value of 0 if price is null
+        // priceCode: selectedProduct.priceCode ? selectedProduct.priceCode : undefined,
+
       };
       const requestData = {
         name,
@@ -50,7 +53,7 @@ const Popup = ({
         applyDiscountCode();
       // Apply discount code if it matches the selected product
       // applyDiscountCode();
-
+    
       // Decrease the usageCount in all product documents
       const productsQuerySnapshot = await getDocs(collection(db, "products"));
       productsQuerySnapshot.forEach(async (productDoc) => {
@@ -67,9 +70,11 @@ const Popup = ({
       });
 
       // Add the productData to the Firestore collection
+      // const docRef = await addDoc(collection(db, "requests"), requestData);
       const docRef = await addDoc(collection(db, "requests"), requestData);
-      console.log("Document written with ID: ", docRef.id);
 
+      console.log("Document written with ID: ", docRef.id);
+     
       // Reset the input fields
       setName("");
       setLocation("");

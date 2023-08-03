@@ -97,7 +97,7 @@ const Requests = () => {
                             </div> */}
                           </strong>
                           <div className="prices">
-                            <p className="iopp">{request.productData.price}$</p>
+                            <p className="iopp">{request.productData.prices}$</p>
                           </div>
                          
                         </div>

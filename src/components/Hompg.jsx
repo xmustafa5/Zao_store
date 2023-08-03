@@ -18,8 +18,8 @@ import backLogo from "../assets/images/shape-up-orange.png";
 import upLogo from "../assets/images/shape-up-orange.png";
 import cta from "../assets/images/cta-bg-img1.png";
 import { Link, useNavigate } from "react-router-dom";
-
 import "./Hompg.css";
+import { useAuth } from "../context/AuthContext";
 const Hompg = () => {
   const navigate = useNavigate();
 
@@ -29,9 +29,14 @@ const Hompg = () => {
       shopSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the "shop" section
     }
   };
+  const { count,setcount } = useAuth();
 
   return (
     <div className="home  ">
+     <button onClick={()=> setcount(count + 1)}>
+    click me
+     </button>
+     <p> fdfddfd {count}</p>
       <div className={"home22"}>
         <div className={"shape"}>
           {/* <div className={"shape1"}>
